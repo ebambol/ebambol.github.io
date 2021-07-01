@@ -69,8 +69,10 @@ body {
 }
 
 .page__title {
+  font-family: $cute;
   margin-top: 0;
-  line-height: 1;
+  line-height: 1.2;
+  color: #6BBF71;
 
   & + .page__meta {
     margin-top: -0.5em;
@@ -283,6 +285,7 @@ body {
   color: $muted-text-color;
   font-family: $sans-serif;
   font-size: $type-size-6;
+  margin-top: -0.5em;
 
   p {
     margin: 0;
@@ -295,7 +298,7 @@ body {
 
 .page__meta-title {
   margin-bottom: 10px;
-  font-size: $type-size-6;
+  font-size: $type-size-4;
   text-transform: uppercase;
 }
 
@@ -310,6 +313,7 @@ body {
    ========================================================================== */
 
 .page__taxonomy {
+  margin-top: -5px;
   .sep {
     display: none;
   }
@@ -323,14 +327,55 @@ body {
   display: inline-block;
   margin-right: 5px;
   margin-bottom: 8px;
-  padding: 5px 10px;
+  padding: 3px 8px;
+  font-family: $serif;
   text-decoration: none;
   border: 1px solid mix(#000, $border-color, 25%);
   border-radius: $border-radius;
 
+  &:visited{
+    color: #b7d9ba;
+  }
+
   &:hover {
     text-decoration: none;
-    color: $link-color-hover;
+    color: #6BBF71;
+  }
+}
+
+.page__taxonomy-item-category {
+  display: inside;
+  margin-right: 5px;
+  margin-bottom: 8px;
+  padding: 3px 8px;
+  text-decoration: none;
+  border: 1px solid #373C3F;
+  border-radius: 4px;
+  background-color: #6d7275;
+  font-family: $serif;
+
+  &:link, &:visited{
+    color: #b7d9ba;
+  }
+
+  &:hover {
+    color: #6BBF71;
+  }
+}
+
+.page__taxonomy-item-tag {
+  display: inside;
+  margin-right: 5px;
+  margin-bottom: 8px;
+  padding: 3px 8px;
+  text-decoration: none;
+  border: 1px solid #373C3F;
+  border-radius: 4px;
+  background-color: #4D5357;
+  font-family: $serif;
+
+  &:hover {
+    color: #6BBF71;
   }
 }
 
@@ -371,7 +416,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   margin: 1.414em 0;
   padding: 0;
-  font-size: 0.75em;
+  font-size: 1.25em;
   list-style: none;
 
   @include breakpoint($large) {

@@ -69,7 +69,7 @@ es: &DEFAULT_ES
   page                       : "Página"
   pagination_previous        : "Anterior"
   pagination_next            : "Siguiente"
-  breadcrumb_home_label      : "Inicio"
+  breadcrumb_home_label      : "Home"
   breadcrumb_separator       : "/"
   menu_label                 : "Alternar menú"
   search_label               : "Alternar búsqueda"
@@ -605,7 +605,7 @@ ko: &DEFAULT_KO
   breadcrumb_separator       : "/"
   menu_label                 : "토글 메뉴"
   search_label               :
-  toc_label                  : "On This Page"
+  toc_label                  : "목차"
   ext_link_label             : "직접 링크"
   less_than                  : "최대"
   minute_read                : "분 소요"

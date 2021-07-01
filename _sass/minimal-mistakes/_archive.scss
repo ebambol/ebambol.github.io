@@ -24,6 +24,14 @@
   a {
     position: relative;
     z-index: 10;
+    text-decoration: none;
+
+    &:visited{
+      color: #b7d9ba;
+    }
+    &:hover {
+      color: #6BBF71;
+    }
   }
 
   a[rel="permalink"] {
@@ -44,7 +52,7 @@
 }
 
 .archive__item-title {
-  margin-bottom: 0.25em;
+  margin-bottom: 0.9em;
   font-family: $sans-serif-narrow;
   line-height: initial;
   overflow: hidden;

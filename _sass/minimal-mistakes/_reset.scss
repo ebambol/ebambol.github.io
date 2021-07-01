@@ -11,17 +11,17 @@ html {
   font-size: 16px;
 
   @include breakpoint($medium) {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   @include breakpoint($large) {
-    font-size: 20px;
+    font-size: 17px;
   }
-
+/*
   @include breakpoint($x-large) {
-    font-size: 22px;
+    font-size: 17px;
   }
-
+*/
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
@@ -40,6 +40,22 @@ body { margin: 0; }
 ::selection {
   color: #fff;
   background: #000;
+}
+
+::-webkit-scrollbar{
+  width: 16px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #DAF5E5;
+  border-radius: 16px;
+  &:hover{
+    background-color: #6BBF71;
+  }
+}
+::-webkit-scrollbar-track{
+  background-color: #4b4f52;
+  border-radius: 16px;
 }
 
 /* Display HTML5 elements in IE6-9 and FF3 */
