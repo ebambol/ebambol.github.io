@@ -609,6 +609,12 @@
   }
 }
 
+.pagination_prev_next--pager{
+  &:hover{
+    background-color: rgba(#000, 0.12);
+  }
+}
+
 .pagination_prev_next--pager.disabled-first-child {
   margin-bottom: 1em;
   border-top-left-radius: 0;
