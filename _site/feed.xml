@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-07-07T21:04:58+09:00</updated><id>/feed.xml</id><title type="html">공부 블로그 📗</title><subtitle>안녕하세요 :)</subtitle><author><name>ebambol</name></author><entry><title type="html">Network 흐름만 알아보기</title><link href="/network/Internet/" rel="alternate" type="text/html" title="Network 흐름만 알아보기" /><published>2021-07-05T00:00:00+09:00</published><updated>2021-07-05T00:00:00+09:00</updated><id>/network/Internet</id><content type="html" xml:base="/network/Internet/">&lt;blockquote&gt;
+  &lt;p&gt;실제로는 더 복잡한 과정이지만 &lt;strong&gt;많이 생략&lt;/strong&gt;되어 있습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/73654909/124393261-9d2de280-dd34-11eb-95f2-f58d5f5aef0a.png&quot; alt=&quot;JSP_re&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;아래 이미지 파일을 다른 곳으로 전송하고자 할 때 컴퓨터는 어떻게 할까? 레이어가 전송할 수 있는 최대 프로토콜 데이터 단위인 &lt;u&gt;프로토콜의 최대 전송 단위 (MTU; Maximum Transmission Unit)로 잘라 전송&lt;/u&gt;한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/73654909/124391092-dca30180-dd29-11eb-8863-ff3898e8092b.png&quot; alt=&quot;html&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;컴퓨터는 이진법만을 알아듣는데, 만약 이미지 용량이 1MB이면 1048576byte, 1바이트는 8bit이므로 8388608bit, 약 838만 개의 0과 1의 숫자를 전송하는 것과 같다. 이를 잘 포장하여 출발 주소(IP Address)와 도착 주소(IP Address)를 머리글(Header)에 작성하여 보낸다. 데이터 라우터로 이동시키기 위해 라디오처럼 주파수 변조를 이용하여 0과 1이 서로 다른 차이를 주어서 수신기가 알아 들을 수 있도록 한다.&lt;/p&gt;
+
+&lt;p&gt;라우터를 빠져나와 SKT, KT와 같은 ISP(Internet Service Provider)로 이동하게 되고 ISP는 머리글(Header)를 분석하여 허브까지 최적의 경로를 알아낸다. 미국이나 유럽같이 지구 반대편으로 정보를 전달하기 위해서는 바다로 들어갔다 나오는 &lt;a href=&quot;https://www.submarinecablemap.com/&quot;&gt;해저케이블&lt;/a&gt;을 통해 전송된다.&lt;/p&gt;
+
+&lt;h4 id=&quot;웹-요청-및-응답&quot;&gt;웹 요청 및 응답&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/73654909/124393214-53dd9300-dd34-11eb-949d-b7fd6310942d.png&quot; alt=&quot;OSI7_TCPIP&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;위에서 간단하게 흐름을 알아보았다. 이번에도 간단하지만 TCP/IP모델을 이용하여 다시 정리해 보겠다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/73654909/124394004-4d511a80-dd38-11eb-8f02-ea39123a0d5e.png&quot; alt=&quot;TCPIP_process&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;참조 : &lt;a href=&quot;https://youtu.be/6jo2OYPK7k0&quot; target=&quot;_blank&quot;&gt;네트워크 계층으로 알아보는 인터넷의 원리 - 코드없는 프로그래밍(Youtube)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;클라이언트(브라우저)가 서버에게 요청을 보내려면 우선 출입문을 여는데 여기서 출입문을  포트라고 한다. 포트는 0~65535까지 많이 존재하는데 그중 하나를 골라 a.com의 웹서버에 요청을 보내면 TCP에서는 포트번호, IP에서는 IP주소, Ethernet은 MAC주소를 받고 처리한다.&lt;/p&gt;</content><author><name>ebambol</name></author><category term="Network" /><category term="Computer Science" /><summary type="html">실제로는 더 복잡한 과정이지만 많이 생략되어 있습니다.</summary></entry><entry><title type="html">Maven</title><link href="/java/maven/" rel="alternate" type="text/html" title="Maven" /><published>2021-06-30T00:00:00+09:00</published><updated>2021-07-07T00:00:00+09:00</updated><id>/java/maven</id><content type="html" xml:base="/java/maven/">&lt;div class=&quot;notice--primary&quot;&gt;
+&lt;p&gt;💡 이 글은 &lt;a href=&quot;https://youtu.be/VAp0n9DmeEA&quot;&gt;뉴렉처 Maven강의&lt;/a&gt;를 듣고 복습을 목적으로 정리한 글입니다.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h2 id=&quot;maven&quot;&gt;🍀maven&lt;/h2&gt;
+
+&lt;p&gt;자바 빌드를 도와주는 &lt;u&gt;빌드툴&lt;/u&gt;이다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gradle&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ant&lt;/code&gt; 등이 있다.&lt;/p&gt;
+
+&lt;h4 id=&quot;-빌드-과정&quot;&gt;🌲 빌드 과정&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/73654909/124113965-fda7f000-daa6-11eb-805c-9b5f54e1cded.jpg&quot; alt=&quot;maven Build tool&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;프로젝트 생성과 라이브러리설정 작업을 하는 것을 빌드툴이라고 한다.&lt;/p&gt;
+
+&lt;h4 id=&quot;-설치-방법&quot;&gt;🌲 설치 방법&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://maven.apache.org/&quot; target=&quot;_blank&quot;&gt;Apache Maven&lt;/a&gt;에 접속하여 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Binary zip archive&lt;/code&gt;을 다운받고 적당한 위치에 압축을 푼다.&lt;/li&gt;
+  &lt;li&gt;&lt;u&gt;환경변수를 설정&lt;/u&gt;한다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%M2_HOME%&lt;/code&gt;에 설치경로를 작성하고, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;path&lt;/code&gt;에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%M2_HOME%\bin&lt;/code&gt; 작성하여 등록한다.&lt;/li&gt;
+  &lt;li&gt;cmd 창을 열어 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mvn -version&lt;/code&gt;을 입력하여 잘 설치되었는지 확인한다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;-사용법&quot;&gt;🌲 사용법&lt;/h4&gt;
+
+&lt;h5 id=&quot;-자바-프로젝트-생성&quot;&gt;🍁 자바 프로젝트 생성&lt;/h5&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mvn archetype:generate -D	//archetype 생성
+groupId=그룹 이름 -D		//그룹 이름 설정 (패키지와 비슷)
+artifactId=프로젝트 이름 -D	//프로젝트 이름 설정
+archetypeArtifactId=maven-archetype-quickstart	//자바 개발시 이용되는 기본 템플릿
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;-컴파일&quot;&gt;🍁 컴파일&lt;/h5&gt;
+
+&lt;p class=&quot;notice--warning&quot;&gt;❗ 주의사항 : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pom.xml&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src&lt;/code&gt;가 &lt;u&gt;존재하는 폴더에서 실행&lt;/u&gt;해야 하고, cmd에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mvn compile&lt;/code&gt;을 입력하면 컴파일이 작동한다.&lt;/p&gt;
+
+&lt;p&gt;더 이상 지원하지 않는 버전이라 업데이트 하라고 뜨면 아래 코드를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pom.xml&lt;/code&gt;에 작성한다. 설정하지 않았을시 메이븐의 퀵스타트 버전의 기본 JDK1.5버전이 사용된다.&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependencies&amp;gt;&lt;/span&gt;    
+	...
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;properties&amp;gt;&lt;/span&gt;
+	   	&lt;span class=&quot;nt&quot;&gt;&amp;lt;maven.compiler.source&amp;gt;&lt;/span&gt;1.8&lt;span class=&quot;nt&quot;&gt;&amp;lt;/maven.compiler.source&amp;gt;&lt;/span&gt;
+		&lt;span class=&quot;nt&quot;&gt;&amp;lt;maven.compiler.target&amp;gt;&lt;/span&gt;1.8&lt;span class=&quot;nt&quot;&gt;&amp;lt;/maven.compiler.target&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;/properties&amp;gt;&lt;/span&gt;
+	...
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/project&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;mvn &lt;u&gt;패키지를 만들고 싶으면&lt;/u&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mvn package&lt;/code&gt;를 cmd에 입력하면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.jar&lt;/code&gt;파일을 만들어준다. 이 jar파일의 확장자를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.zip&lt;/code&gt;으로 변경하여 내용을 확인 할 수 있는데 안에는 실행파일인 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.class&lt;/code&gt;파일이 들어있다. 이를 아래 방법을 이용하면 정상적으로 실행된다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;java -cp target\라이브러리.jar 클래스이름
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;-실행-순서-lifecycle&quot;&gt;🍁 실행 순서 (LifeCycle)&lt;/h5&gt;
+
+&lt;p&gt;Maven은 &lt;a href=&quot;https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Lifecycle_Reference&quot; target=&quot;_blank&quot;&gt;Default LifeCycle&lt;/a&gt; 을 따라 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;compile, test, package&lt;/code&gt;등 &lt;u&gt;원하는 위치까지 자동으로 실행&lt;/u&gt;해 준다. 이는 자바, 웹에 따라 단계가 다를 수 있지만, &lt;u&gt;일반적으로는 단계가 비슷&lt;/u&gt;하다. 그리고 패키징은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jar,war&lt;/code&gt;등으로 변경이 가능한데 이는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pom.xml(Project Object Model)&lt;/code&gt;에서 설정 가능하다.&lt;/p&gt;
+
+&lt;h6 id=&quot;-phase-plug-in-goal&quot;&gt;🍂 Phase, Plug-in, Goal&lt;/h6&gt;
+
+&lt;p&gt;각 단계별(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Phase&lt;/code&gt;) 프로그램들이 맵핑되어 있고 &lt;u&gt;각 단계별 실행되는 프로그램&lt;/u&gt;을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Plug-in&lt;/code&gt;이라 하고 maven이 제공하는 &lt;a href=&quot;https://maven.apache.org/plugins/index.html&quot;&gt;기본플러그인&lt;/a&gt;과 다른 곳에서 구하는 플러그인이 있다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Plug-in&lt;/code&gt; 내부의 프로그램을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Goal&lt;/code&gt;이라하고, &lt;u&gt;플러그인을 설정하고 교체하는 것을 담당하는 것&lt;/u&gt;이 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pom.xml&lt;/code&gt;이다. 아래는 compile시 필요한 플러그인을 출력하는 명령어이다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mvn help:describe -Dcmd=compile
+결과&amp;gt;
+It is a part of the lifecycle for the POM packaging 'jar'. This lifecycle includes the following phases:
+* validate: Not defined
+* initialize: Not defined
+* generate-sources: Not defined
+* process-sources: Not defined
+* generate-resources: Not defined
+* process-resources: org.apache.maven.plugins:maven-resources-plugin:2.6:resources
+* compile: org.apache.maven.plugins:maven-compiler-plugin:3.1:compile
+* process-classes: Not defined
+* generate-test-sources: Not defined
+* process-test-sources: Not defined
+* generate-test-resources: Not defined
+* process-test-resources: org.apache.maven.plugins:maven-resources-plugin:2.6:testResources
+* test-compile: org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile
+* process-test-classes: Not defined
+* test: org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test
+* prepare-package: Not defined
+* package: org.apache.maven.plugins:maven-jar-plugin:2.4:jar
+* pre-integration-test: Not defined
+* integration-test: Not defined
+* post-integration-test: Not defined
+* verify: Not defined
+* install: org.apache.maven.plugins:maven-install-plugin:2.4:install
+* deploy: org.apache.maven.plugins:maven-deploy-plugin:2.7:deploy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위의 결과중 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;compile&lt;/code&gt;를 변경하기 위해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pom.xml&lt;/code&gt;을 이용하여 JDK버전을 변경할 수 있다.&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	...  
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependencies&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- 플러그인 재정의 (override)--&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;build&amp;gt;&lt;/span&gt;
+  	&lt;span class=&quot;nt&quot;&gt;&amp;lt;plugins&amp;gt;&lt;/span&gt;
+  		&lt;span class=&quot;nt&quot;&gt;&amp;lt;plugin&amp;gt;&lt;/span&gt;
+  			&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- 플러그인 이름 --&amp;gt;&lt;/span&gt;
+	  		&lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;maven-compiler-plugin&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+            		&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- 플러그인 버전 --&amp;gt;&lt;/span&gt;
+	  		&lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;3.8.1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+	  		&lt;span class=&quot;nt&quot;&gt;&amp;lt;configuration&amp;gt;&lt;/span&gt;
+	  			&lt;span class=&quot;nt&quot;&gt;&amp;lt;source&amp;gt;&lt;/span&gt;1.8&lt;span class=&quot;nt&quot;&gt;&amp;lt;/source&amp;gt;&lt;/span&gt;
+	  			&lt;span class=&quot;nt&quot;&gt;&amp;lt;target&amp;gt;&lt;/span&gt;1.8&lt;span class=&quot;nt&quot;&gt;&amp;lt;/target&amp;gt;&lt;/span&gt;
+	  		&lt;span class=&quot;nt&quot;&gt;&amp;lt;/configuration&amp;gt;&lt;/span&gt;
+  		&lt;span class=&quot;nt&quot;&gt;&amp;lt;/plugin&amp;gt;&lt;/span&gt;
+  	&lt;span class=&quot;nt&quot;&gt;&amp;lt;/plugins&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/build&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/project&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/73654909/124161486-6d829e80-dad8-11eb-9e9f-07f9c93b4c35.jpg&quot; alt=&quot;Eclipse_maven_2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;플러그인의 버전이 올라감에 따라 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;source,target&lt;/code&gt;을 변경하고 싶을때는 오버라이드하듯 적용할 필요 없이 위해서 작성한 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;maven.compiler.source, target&lt;/code&gt; 방식으로 작성해도 된다. 다만, &lt;u&gt;플러그인이 가진 자세한 속성을 사용하고자 할때&lt;/u&gt;는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;오버라이드 방식&lt;/code&gt;을 이용한다.&lt;/p&gt;
+
+&lt;h4 id=&quot;-웹프로젝트로-변경법&quot;&gt;🌲 웹프로젝트로 변경법&lt;/h4&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pom.xml&lt;/code&gt;에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;packaging&lt;/code&gt;을 jar에서 war로 변경함으로 간단하게 웹개발하기 위한 프로젝트로 변경이 가능하다. 변경하여 저장하게 되면 바로 변경되지 않고, 프로젝트를 우클릭 하여 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Maven - Update Project...&lt;/code&gt; 을 이용하도록 하자.&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!--변경전--&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;packaging&amp;gt;&lt;/span&gt;jar&lt;span class=&quot;nt&quot;&gt;&amp;lt;/packaging&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!--변경후--&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;packaging&amp;gt;&lt;/span&gt;war&lt;span class=&quot;nt&quot;&gt;&amp;lt;/packaging&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;정상적으로 수정되면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pom.xml&lt;/code&gt;에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;web.xml is missing and &amp;lt;failOnMissingWebXml&amp;gt; is set to true&lt;/code&gt; 라는 오류가 발생한다. 이는 web.xml이 없어서 나타나는 오류로 의도적으로 만들었으면 src밑에 &lt;u&gt;webapp(WebHome)관련 폴더에서 `WEB-INF`폴더를 추가&lt;/u&gt;하고 추가한 폴더에 톰캣 폴더에 존재하는 &lt;u&gt;`web.xml`을 추가&lt;/u&gt;하면 오류가 사라지고, 웹프로젝트로 변경이 완료된다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;web.xml은 톰캣폴더 아래 webapps\ROOT\WEB-INF에 존재한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h5 id=&quot;-라이브러리-설정&quot;&gt;🍁 라이브러리 설정&lt;/h5&gt;
+
+&lt;p&gt;jsp 파일을 생성하게 되면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;The superclass &quot;javax.servlet.http.HttpServlet&quot; was not found on the Java&lt;/code&gt; 오류가 발생한다. 이는 라이브러리 설정을 해달라는 오류이다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;ol&gt;
+      &lt;li&gt;프로젝트에서 우클릭하여 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Bulid Path - Configure Buld Path...&lt;/code&gt;클릭&lt;/li&gt;
+      &lt;li&gt;&lt;u&gt;Library 탭에서 Add Library 클릭후 Server Runtime&lt;/u&gt;을 통하여 톰캣라이브러리를 설정한다.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;이 방법은 다른 장소(회사,집)에서 톰캣서버의 경로가 일치하지 않아 계속 변경해야한다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;두번째 방법은 GitHub처럼 &lt;a href=&quot;https://mvnrepository.com/&quot;&gt;Maven 저장소&lt;/a&gt;를 이용하여 원격에 존재하는 파일을 자동으로 로컬로 가져오는 방법이다.
+    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;https://mvnrepository.com/&quot;&gt;Maven 저장소&lt;/a&gt;에 들어가서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tomcat jsp&lt;/code&gt;를 검색하게 되면 톰캣 버전별로 jsp API가 나오는데 원하는 버전을 클릭후 나타나는 &lt;u&gt;Maven 코드를 복사한다.&lt;/u&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;u&gt;`pom.xml`에 `dependency`밑에 붙여넣으면 원격에 있는 파일이 로컬로 복사된다.&lt;/u&gt; 복사되는 경로는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C:\Users\[사용자이름]\.m2\repository\org\apache\tomcat&lt;/code&gt;이다. 다른 확인 방법으로는 이클립스를 이용하여 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Java Resources-Libraries-Maven Dependencies&lt;/code&gt;를 통해 jsp-api 이외에 &lt;u&gt;el, servlet이 자동으로 설치 된것을 확인할 수 있다.&lt;/u&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>ebambol</name></author><category term="Java" /><category term="Maven" /><summary type="html"></summary></entry><entry><title type="html">도시락드림</title><link href="/project/DosirakDream/" rel="alternate" type="text/html" title="도시락드림" /><published>2021-06-04T00:00:00+09:00</published><updated>2021-06-25T00:00:00+09:00</updated><id>/project/DosirakDream</id><content type="html" xml:base="/project/DosirakDream/">&lt;blockquote&gt;
+  &lt;p&gt;도시락드림ppt 를 정리한 페이지입니다.
+ppt는 &lt;a href=&quot;https://github.com/ebambol/DosirakDream&quot;&gt;Github&lt;/a&gt;에서 받으실 수 있습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;-프로젝트-개요&quot;&gt;🌲 프로젝트 개요&lt;/h3&gt;
+
+&lt;p&gt;시니어 세대를 위한 도시락 배달 및 도움 서비스&lt;/p&gt;
+
+&lt;p&gt;상품의 주문도 받고 고령자의 안부를 확인하여 가족이 안심할 수 있는 도시락 제품을 판매하기 위한 플랫폼 개발하였습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;소스코드  &lt;a href=&quot;https://github.com/ebambol/DosirakDream&quot;&gt;Github&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;-개발환경&quot;&gt;🍁 개발환경&lt;/h4&gt;
+
+&lt;p&gt;Java 1.8.0_171
+Tomcat 9.0
+Bootstrap 5.0 beta
+MySQL 8.0.17&lt;/p&gt;
+
+&lt;h4 id=&quot;-사이트맵-구성&quot;&gt;🍁 사이트맵 구성&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/73654909/124751465-9f28b900-df61-11eb-8c6b-1cf19fea5ae0.PNG&quot; alt=&quot;슬라이드6&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;도시락드림 프로젝트는 상품관련한 전체종류, 반찬종류, 국/찌개종류, 밥 종류로 구성되어있고, 상품을 추가하였을때 장바구니 페이지와 상품주문 페이지로 구성되어 있습니다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;회원과 관련된 로그인, 로그아웃, 회원가입과 소통을 위한 공지사항, 게시판이 존재합니다. 아이디가 admin일 경우 관리자페이지와 공지사항,게시판,상품을 등록,수정,삭제가 가능합니다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;-구성&quot;&gt;🌲 구성&lt;/h3&gt;
+
+&lt;h4 id=&quot;-데이터베이스-구성&quot;&gt;🍁 데이터베이스 구성&lt;/h4&gt;
+
+&lt;p&gt;회원정보, 상품정보, 장바구니정보, 공지사항, 게시판으로 구성되어 있습니다.&lt;/p&gt;
+
+&lt;h5 id=&quot;-product-상품-정보-관리&quot;&gt;🍂 product 상품 정보 관리&lt;/h5&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;순번&lt;/th&gt;
+      &lt;th&gt;칼럼  명&lt;/th&gt;
+      &lt;th&gt;칼럼  설명&lt;/th&gt;
+      &lt;th&gt;타입&lt;/th&gt;
+      &lt;th&gt;Null?&lt;/th&gt;
+      &lt;th&gt;Key&lt;/th&gt;
+      &lt;th&gt;Default&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;pno&lt;/td&gt;
+      &lt;td&gt;상품  코드&lt;/td&gt;
+      &lt;td&gt;varchar(10)&lt;/td&gt;
+      &lt;td&gt;NO&lt;/td&gt;
+      &lt;td&gt;PRI&lt;/td&gt;
+      &lt;td&gt;Null&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;pname&lt;/td&gt;
+      &lt;td&gt;상품  이름&lt;/td&gt;
+      &lt;td&gt;varchar(20)&lt;/td&gt;
+      &lt;td&gt;NO&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Null&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;price&lt;/td&gt;
+      &lt;td&gt;상품  가격&lt;/td&gt;
+      &lt;td&gt;integer&lt;/td&gt;
+      &lt;td&gt;NO&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Null&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;info&lt;/td&gt;
+      &lt;td&gt;상품  설명&lt;/td&gt;
+      &lt;td&gt;text&lt;/td&gt;
+      &lt;td&gt;NO&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Null&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;category&lt;/td&gt;
+      &lt;td&gt;상품  분류&lt;/td&gt;
+      &lt;td&gt;varchar(10)&lt;/td&gt;
+      &lt;td&gt;NO&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Null&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;filename&lt;/td&gt;
+      &lt;td&gt;상품  이미지&lt;/td&gt;
+      &lt;td&gt;varchar(100)&lt;/td&gt;
+      &lt;td&gt;YES&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Null&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h5 id=&quot;-jsp_member-회원정보&quot;&gt;🍂 jsp_member 회원정보&lt;/h5&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;순번&lt;/th&gt;
+      &lt;th&gt;칼럼  명&lt;/th&gt;
+      &lt;th&gt;칼럼  설명&lt;/th&gt;
+      &lt;th&gt;타입&lt;/th&gt;
+      &lt;th&gt;Null?&lt;/th&gt;
+      &lt;th&gt;Key&lt;/th&gt;
+      &lt;th&gt;Default&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;id&lt;/td&gt;
+      &lt;td&gt;회원  아이디&lt;/td&gt;
+      &lt;td&gt;varchar(50)&lt;/td&gt;
+      &lt;td&gt;NO&lt;/td&gt;
+      &lt;td&gt;PRI&lt;/td&gt;
+      &lt;td&gt;Null&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;password&lt;/td&gt;
+      &lt;td&gt;회원  비밀번호&lt;/td&gt;
+      &lt;td&gt;varchar(50)&lt;/td&gt;
+      &lt;td&gt;NO&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Null&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;username&lt;/td&gt;
+      &lt;td&gt;회원  이름&lt;/td&gt;
+      &lt;td&gt;varchar(20)&lt;/td&gt;
+      &lt;td&gt;NO&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Null&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;addr1&lt;/td&gt;
+      &lt;td&gt;주소&lt;/td&gt;
+      &lt;td&gt;varchar(50)&lt;/td&gt;
+      &lt;td&gt;NO&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Null&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;addr2&lt;/td&gt;
+      &lt;td&gt;상세주소&lt;/td&gt;
+      &lt;td&gt;varchar(30)&lt;/td&gt;
+      &lt;td&gt;NO&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Null&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;phone&lt;/td&gt;
+      &lt;td&gt;휴대폰  번호&lt;/td&gt;
+      &lt;td&gt;varchar(20)&lt;/td&gt;
+      &lt;td&gt;NO&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Null&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h5 id=&quot;-cart-장바구니-정보&quot;&gt;🍂 cart 장바구니 정보&lt;/h5&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;순번&lt;/th&gt;
+      &lt;th&gt;칼럼  명&lt;/th&gt;
+      &lt;th&gt;칼럼  설명&lt;/th&gt;
+      &lt;th&gt;타입&lt;/th&gt;
+      &lt;th&gt;Null?&lt;/th&gt;
+      &lt;th&gt;Key&lt;/th&gt;
+      &lt;th&gt;Default&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;product_num&lt;/td&gt;
+      &lt;td&gt;상품 코드&lt;/td&gt;
+      &lt;td&gt;varchar(20)&lt;/td&gt;
+      &lt;td&gt;NO&lt;/td&gt;
+      &lt;td&gt;PRI&lt;/td&gt;
+      &lt;td&gt;Null&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;product_name&lt;/td&gt;
+      &lt;td&gt;상품  이름&lt;/td&gt;
+      &lt;td&gt;varchar(50)&lt;/td&gt;
+      &lt;td&gt;NO&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Null&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;userid&lt;/td&gt;
+      &lt;td&gt;회원  아이디&lt;/td&gt;
+      &lt;td&gt;varchar(20)&lt;/td&gt;
+      &lt;td&gt;NO&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Null&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;price&lt;/td&gt;
+      &lt;td&gt;가격&lt;/td&gt;
+      &lt;td&gt;integer&lt;/td&gt;
+      &lt;td&gt;NO&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Null&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h5 id=&quot;-notice-정보&quot;&gt;🍂 notice 정보&lt;/h5&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;순번&lt;/th&gt;
+      &lt;th&gt;칼럼  명&lt;/th&gt;
+      &lt;th&gt;칼럼  설명&lt;/th&gt;
+      &lt;th&gt;타입&lt;/th&gt;
+      &lt;th&gt;Null?&lt;/th&gt;
+      &lt;th&gt;Key&lt;/th&gt;
+      &lt;th&gt;Default&lt;/th&gt;
+      &lt;th&gt;Extra&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Id&lt;/td&gt;
+      &lt;td&gt;공지사항 ID&lt;/td&gt;
+      &lt;td&gt;Int(11)&lt;/td&gt;
+      &lt;td&gt;NO&lt;/td&gt;
+      &lt;td&gt;PRI&lt;/td&gt;
+      &lt;td&gt;Null&lt;/td&gt;
+      &lt;td&gt;Auto_increment&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;title&lt;/td&gt;
+      &lt;td&gt;제목&lt;/td&gt;
+      &lt;td&gt;varchar(20)&lt;/td&gt;
+      &lt;td&gt;YES&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Null&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;content&lt;/td&gt;
+      &lt;td&gt;내용&lt;/td&gt;
+      &lt;td&gt;text&lt;/td&gt;
+      &lt;td&gt;YES&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Null&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;writeid&lt;/td&gt;
+      &lt;td&gt;작성자&lt;/td&gt;
+      &lt;td&gt;varchar(20)&lt;/td&gt;
+      &lt;td&gt;YES&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Null&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;ntdate&lt;/td&gt;
+      &lt;td&gt;작성일&lt;/td&gt;
+      &lt;td&gt;Datetime&lt;/td&gt;
+      &lt;td&gt;YES&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Null&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;hit&lt;/td&gt;
+      &lt;td&gt;조회수  (미구현)&lt;/td&gt;
+      &lt;td&gt;Int(100)&lt;/td&gt;
+      &lt;td&gt;YES&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;files&lt;/td&gt;
+      &lt;td&gt;파일&lt;/td&gt;
+      &lt;td&gt;varchar(30)&lt;/td&gt;
+      &lt;td&gt;YES&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Null&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;pub&lt;/td&gt;
+      &lt;td&gt;공개여부&lt;/td&gt;
+      &lt;td&gt;Int(1)&lt;/td&gt;
+      &lt;td&gt;NO&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h5 id=&quot;-board-구성&quot;&gt;🍂 board 구성&lt;/h5&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;순번&lt;/th&gt;
+      &lt;th&gt;칼럼  명&lt;/th&gt;
+      &lt;th&gt;칼럼  설명&lt;/th&gt;
+      &lt;th&gt;타입&lt;/th&gt;
+      &lt;th&gt;Null?&lt;/th&gt;
+      &lt;th&gt;Key&lt;/th&gt;
+      &lt;th&gt;Default&lt;/th&gt;
+      &lt;th&gt;Extra&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Id&lt;/td&gt;
+      &lt;td&gt;게시글 고유번호&lt;/td&gt;
+      &lt;td&gt;Int(11)&lt;/td&gt;
+      &lt;td&gt;NO&lt;/td&gt;
+      &lt;td&gt;PRI&lt;/td&gt;
+      &lt;td&gt;Null&lt;/td&gt;
+      &lt;td&gt;Auto_increment&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;title&lt;/td&gt;
+      &lt;td&gt;제목&lt;/td&gt;
+      &lt;td&gt;varchar(20)&lt;/td&gt;
+      &lt;td&gt;YES&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Null&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;content&lt;/td&gt;
+      &lt;td&gt;내용&lt;/td&gt;
+      &lt;td&gt;text&lt;/td&gt;
+      &lt;td&gt;YES&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Null&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;writeid&lt;/td&gt;
+      &lt;td&gt;작성자&lt;/td&gt;
+      &lt;td&gt;varchar(20)&lt;/td&gt;
+      &lt;td&gt;YES&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Null&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;bdate&lt;/td&gt;
+      &lt;td&gt;작성일&lt;/td&gt;
+      &lt;td&gt;Datetime&lt;/td&gt;
+      &lt;td&gt;YES&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Null&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;-자바-코드-구성&quot;&gt;🍁 자바 코드 구성&lt;/h4&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;📂src
+├──📘controller				#📘컨트롤러
+│	├──📘admin					#📘관리자 페이지
+│	│	├──📘board					#📘게시판
+│	│	│	├──📝DeleteController			#📝게시판 삭제
+│	│	│	├──📝DetailController			#📝게시판 상세
+│	│	│	├──📝ListController				#📝게시판 리스트
+│	│	│	├──📝RegController				#📝게시판 게시글 등록
+│	│	│	├──📝UpdateController			#📝게시글 수정
+│	│	│	└──📝UpdateProcessContoller			#📝게시글 수정처리
+│	│	├──📘notice					#📘공지사항
+│	│	│	├──📝DeleteController			#📝공지사항 삭제
+│	│	│	├──📝DetailController			#📝공지사항 상세
+│	│	│	├──📝ListController				#📝공지사항 리스트
+│	│	│	├──📝RegController				#📝공지사항 게시글 등록
+│	│	│	├──📝UpdateController			#📝공지사항 게시글 수정
+│	│	│	└──📝UpdateProcessContoller			#📝공지사항 게시글 수정처리
+│	│	└──📘product					#📘상품
+│	│		├──📝AddController				#📝상품 추가
+│	│		├──📝DeleteController			#📝상품 삭제
+│	│		├──📝DetailController			#📝상품 상세
+│	│		├──📝PageController				#📝상품 리스트
+│	│		├──📝UpdateController			#📝상품 수정
+│	│		└──📝UpdateProcessController		#📝상품 수정처리
+│	├──📘board					#📘게시판
+│	│	├──📝DeleteController			#📝게시판 삭제
+│	│	├──📝DetailController			#📝게시판 상세
+│	│	├──📝ListController				#📝게시판 리스트
+│	│	├──📝RegController				#📝게시판 게시글 등록
+│	│	├──📝UpdateController			#📝게시글 수정
+│	│	└──📝UpdateProcessContoller			#📝게시글 수정처리
+│	├──📘cart					#📘카트
+│	│	├──📝addCartController			#📝카트 추가
+│	│	├──📝CartController				#📝카트 페이지
+│	│	├──📝DeleteCart				#📝카트 전체 제거
+│	│	└──📝RemoveCartController			#📝카트 선택 제거
+│	├──📘member					#📘회원
+│	│	├──📝SignInController			#📝로그인
+│	│	└──📝SignUpController			#📝로그아웃
+│	├──📘notice					#📘공지사항
+│	│	├──📝DetailController			#📝상세
+│	│	└──📝ListController				#📝리스트
+│	├──📘order					#📘주문
+│	│	├──📝OrderController			#📝주문페이지
+│	│	└──📝OrderProcessController			#📝주문처리
+│	├──📘product					#📘상품
+│	│	└──📝ListController				#📝상품리스트
+│	└──📝indexController			#📝홈페이지
+├── 📘entity					#📘테이블
+│	├──📝Board					#📝게시판 테이블
+│	├──📝BoardView				#📝게시판 뷰 테이블
+│	├──📝Cart					#📝카트 테이블
+│	├──📝Member					#📝회원 테이블
+│	├──📝Notice					#📝공지 테이블
+│	├──📝NoticeView				#📝공지 뷰 테이블
+│	└──📝Products				#📝상품 테이블
+├── 📘service				#📘서비스
+│	├──📝BoardService					#📝게시판 서비스
+│	├──📝CartService					#📝카트 서비스
+│	├──📝MemberService					#📝회원 서비스
+│	├──📝NoticeService					#📝공지 서비스
+│	├──📝OrderService					#📝주문 서비스
+│	└──📝ProductsService				#📝상품 서비스
+└──📘util					#📘유틸
+	├──📝CharacterEncodingFilter  		#📝인코딩 필터
+	└──📝Member					#📝회원 서비스
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;-view-구성&quot;&gt;🍁 view 구성&lt;/h4&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;📂WebContent
+├──📂parts
+│	├──📝footer.jsp		#푸터페이지
+│	└──📝header.jsp		#헤더페이지
+├──📂resources		
+│	├──📂css
+│	│	└──📘style.css	#커스텀 css
+│	└──📂js
+│		└──📒script.js	#js
+└──📂WEB-INF
+	└──📂view
+		├──📂admin				#관리자 페이지
+		│	├──📂board				#게시판
+		│	│	├──📝detail.jsp			#상세
+		│	│	├──📝list.jsp			#목록
+		│	│	├──📝reg.jsp			#글쓰기
+		│	│	└──📝update.jsp			#수정
+		│	└──📂notice				#공지사항
+		│		├──📝detail.jsp			#상세
+		│		├──📝list.jsp			#목록
+		│		├──📝reg.jsp			#글쓰기
+		│		└──📝update.jsp			#수정
+		├──📂board				#게시판
+		│	├──📝detail.jsp			#상세
+		│	├──📝list.jsp			#목록
+		│	├──📝reg.jsp			#글쓰기
+		│	└──📝update.jsp			#수정
+		├──📂member				#회원 페이지
+		│	├──📄signIn.jsp			#로그인
+		│	├──📄signOut.jsp			#로그아웃
+		│	├──📄signUp_success.jsp		#회원가입 성공
+		│	└──📄signUp.jsp			#회원가입
+		├──📂notice				#공지사항
+		│	├──📄detail.jsp			#상세
+		│	└──📄list.jsp			#목록
+		└──📂product			#상품
+			├──📄addDosirak.jsp			#추가
+			├──📄cart.jsp			#카트페이지
+			├──📄detail.jsp			#상품 상세
+			├──📄edit.jsp			#상품 관리
+			├──📄index.jsp			#홈페이지
+			├──📄list.jsp			#상품 목록
+			├──📄order_process.jsp		#주문 처리
+			├──📄order.jsp			#주문
+			└──📄update.jsp			#상품 수정
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;-화면구성&quot;&gt;🌲 화면구성&lt;/h3&gt;
+
+&lt;h4 id=&quot;-메인-페이지&quot;&gt;🍁 메인 페이지&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/73654909/124752932-6ab5fc80-df63-11eb-9b41-f570925eb8f5.PNG&quot; alt=&quot;슬라이드14&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;비로그인시 로그인과 회원가입 버튼이 나타나도록하고 홈페이지에서는 카테고리별로 3개의 상품을 출력해서 보여줍니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;-비로그인&quot;&gt;🍁 비로그인&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/73654909/124753046-7ef9f980-df63-11eb-91c9-eb451d3f4565.PNG&quot; alt=&quot;슬라이드15&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;로그인과 회원가입 버튼을 클릭했을때 나오는 페이지입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/73654909/124753089-8c16e880-df63-11eb-90ed-a9c0d58ac48c.PNG&quot; alt=&quot;슬라이드16&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;div&lt;/code&gt;태그에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;onclick&lt;/code&gt;을 이용하여 상세페이지로 이동하도록 하였습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/73654909/120837514-bf034080-c5a1-11eb-98d2-0be90a178134.PNG&quot; alt=&quot;슬라이드14&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;장바구니 추가와 장바구니는 비로그인시 사용이 불가하며 클릭시 로그인 페이지로 이동합니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;-회원-로그인&quot;&gt;🍁 회원 로그인&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/73654909/120837515-bf9bd700-c5a1-11eb-96ea-1acfab7d9532.PNG&quot; alt=&quot;슬라이드15&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;장바구니 추가버튼을 눌렀을 때, 추가할지 물어보고 확인을 클릭하게 되면 상품이 추가되었다는 알림창이 나타납니다.
+장바구니 버튼을 눌렀을 때, 장바구니 페이지로 이동합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/73654909/124753201-a781f380-df63-11eb-98f9-d18af5cbcec7.PNG&quot; alt=&quot;슬라이드19&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;카트페이지에서는 장바구니 추가한 목록을 출력해주고, 장바구니의 총액과 선택적으로 삭제,전체삭제이 가능합니다.
+주문하기 버튼을 누르면 주문페이지로 넘어가지만, 장바구니에 상품이 없을 시 주문페이지로 넘어가지 않습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/73654909/120837520-c0346d80-c5a1-11eb-8aed-66575aff8065.PNG&quot; alt=&quot;슬라이드17&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;주문페이지에서는 현재 주문하고자 하는 상품의 목록을 출력해주고, 회원가입때 작성한 정보드를 배송주소의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;input&lt;/code&gt; 값에 넣어주고 결제유형을 선택하고 동의에 체크후 결제하기 버튼을 누르면 결제완료페이지로 이동됩니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/73654909/124753291-c1bbd180-df63-11eb-9459-d616ab6c2c4f.PNG&quot; alt=&quot;슬라이드21&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;주문완료 페이지로 아이디와 주문상품이 간단하게 나오도록 만들었습니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;-관리자-로그인&quot;&gt;🍁 관리자 로그인&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/73654909/124753354-d8622880-df63-11eb-9c9e-6ba30af6b7c3.PNG&quot; alt=&quot;슬라이드22&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;세션 아이디가 admin일때 들어올 수 있는 페이지입니다.
+관리자 페이지에서는 상품,게시글,공지사항을 추가하거나 수정,삭제할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/73654909/124753456-f9c31480-df63-11eb-8c68-f118ab698c34.PNG&quot; alt=&quot;슬라이드23&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;상품 수정 페이지는 데이터베이스에서 상품정보를 불러와서 form에 채워줍니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/73654909/124753508-07789a00-df64-11eb-9d64-d8debce8cbfe.PNG&quot; alt=&quot;슬라이드24&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;공지사항 페이지입니다. 관리자페이지는 공지사항을 등록, 삭제, 공개를 할 수 있고 사용자 페이지는 열람만 가능합니다. 그리고 게시글을 제목,작성자를 기준으로 검색할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/73654909/124753622-2bd47680-df64-11eb-9c52-9960548ad657.PNG&quot; alt=&quot;슬라이드25&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;공지사항 등록 페이지입니다. 제목, 2개의 첨부파일과 내용을 입력할 수 있고 등록과 동시에 공지사항을 공개할 수 있도록 하는 체크박스가 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/73654909/124753715-4c9ccc00-df64-11eb-9a48-da7576a63d6a.PNG&quot; alt=&quot;슬라이드26&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;공지사항 상세보기 페이지입니다. 이곳에서는 id가 admin일 경우 수정과 삭제가 가능하고, 삭제를 클릭시 한번더 확인하는 경고창이 뜹니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/73654909/124753815-6b02c780-df64-11eb-8fc8-5884ebf0aee7.PNG&quot; alt=&quot;슬라이드27&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;게시판 목록 페이지 입니다. 어드민일 경우 삭제할 게시글을 체크후 삭제와 글쓰기가 가능하고 일반 회원은 글쓰기와 검색이 가능합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/73654909/124754005-a43b3780-df64-11eb-9808-e69c18f22de1.PNG&quot; alt=&quot;슬라이드28&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;게시글 등록페이지로 제목과 내용만을 입력받아 등록됩니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/73654909/124754067-bc12bb80-df64-11eb-8326-43ee408620aa.PNG&quot; alt=&quot;슬라이드29&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;게시글 상세보기 페이지로 접속한 아이디가 작성자이거나 admin일 경우 수정과 삭제 버튼이 나타나고 삭제시 한번더 확인하는 창을 표시합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;-유효성-검사&quot;&gt;🌲 유효성 검사&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/73654909/120837528-c1659a80-c5a1-11eb-8913-16c4f5cb64b3.PNG&quot; alt=&quot;슬라이드20&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;회원가입의 유효성검사입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/73654909/120837531-c1659a80-c5a1-11eb-9547-df071127da91.PNG&quot; alt=&quot;슬라이드21&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;로그인의 유효성검사입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/73654909/120837533-c1fe3100-c5a1-11eb-9514-caaa69d6dd44.PNG&quot; alt=&quot;슬라이드22&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;상품등록 페이지의 유효성검사 및 화면구성입니다.&lt;/p&gt;
+
+&lt;p&gt;끝까지 봐주셔서 감사합니다!&lt;/p&gt;</content><author><name>ebambol</name></author><category term="Project" /><category term="Project" /><category term="DosirakDream" /><summary type="html">도시락드림ppt 를 정리한 페이지입니다. ppt는 Github에서 받으실 수 있습니다.</summary></entry></feed>
