@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-07-07T21:04:58+09:00</updated><id>/feed.xml</id><title type="html">공부 블로그 📗</title><subtitle>안녕하세요 :)</subtitle><author><name>ebambol</name></author><entry><title type="html">Network 흐름만 알아보기</title><link href="/network/Internet/" rel="alternate" type="text/html" title="Network 흐름만 알아보기" /><published>2021-07-05T00:00:00+09:00</published><updated>2021-07-05T00:00:00+09:00</updated><id>/network/Internet</id><content type="html" xml:base="/network/Internet/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-07-08T21:58:49+09:00</updated><id>/feed.xml</id><title type="html">공부 블로그 📗</title><subtitle>안녕하세요 :)</subtitle><author><name>ebambol</name></author><entry><title type="html">Network 흐름만 알아보기</title><link href="/network/Internet/" rel="alternate" type="text/html" title="Network 흐름만 알아보기" /><published>2021-07-05T00:00:00+09:00</published><updated>2021-07-05T00:00:00+09:00</updated><id>/network/Internet</id><content type="html" xml:base="/network/Internet/">&lt;blockquote&gt;
   &lt;p&gt;실제로는 더 복잡한 과정이지만 &lt;strong&gt;많이 생략&lt;/strong&gt;되어 있습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -10,7 +10,7 @@
 
 &lt;p&gt;컴퓨터는 이진법만을 알아듣는데, 만약 이미지 용량이 1MB이면 1048576byte, 1바이트는 8bit이므로 8388608bit, 약 838만 개의 0과 1의 숫자를 전송하는 것과 같다. 이를 잘 포장하여 출발 주소(IP Address)와 도착 주소(IP Address)를 머리글(Header)에 작성하여 보낸다. 데이터 라우터로 이동시키기 위해 라디오처럼 주파수 변조를 이용하여 0과 1이 서로 다른 차이를 주어서 수신기가 알아 들을 수 있도록 한다.&lt;/p&gt;
 
-&lt;p&gt;라우터를 빠져나와 SKT, KT와 같은 ISP(Internet Service Provider)로 이동하게 되고 ISP는 머리글(Header)를 분석하여 허브까지 최적의 경로를 알아낸다. 미국이나 유럽같이 지구 반대편으로 정보를 전달하기 위해서는 바다로 들어갔다 나오는 &lt;a href=&quot;https://www.submarinecablemap.com/&quot;&gt;해저케이블&lt;/a&gt;을 통해 전송된다.&lt;/p&gt;
+&lt;p&gt;라우터를 빠져나와 SKT, KT와 같은 ISP(Internet Service Provider)로 이동하게 되고 ISP는 머리글(Header)를 분석하여 허브까지 최적의 경로를 알아낸다. 미국이나 유럽같이 지구 반대편으로 정보를 전달하기 위해서는 바다로 들어갔다 나오는 &lt;a href=&quot;https://www.submarinecablemap.com/&quot; target=&quot;_blank&quot;&gt;해저케이블&lt;/a&gt;을 통해 전송된다.&lt;/p&gt;
 
 &lt;h4 id=&quot;웹-요청-및-응답&quot;&gt;웹 요청 및 응답&lt;/h4&gt;
 
@@ -22,7 +22,7 @@
 
 &lt;p&gt;참조 : &lt;a href=&quot;https://youtu.be/6jo2OYPK7k0&quot; target=&quot;_blank&quot;&gt;네트워크 계층으로 알아보는 인터넷의 원리 - 코드없는 프로그래밍(Youtube)&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;클라이언트(브라우저)가 서버에게 요청을 보내려면 우선 출입문을 여는데 여기서 출입문을  포트라고 한다. 포트는 0~65535까지 많이 존재하는데 그중 하나를 골라 a.com의 웹서버에 요청을 보내면 TCP에서는 포트번호, IP에서는 IP주소, Ethernet은 MAC주소를 받고 처리한다.&lt;/p&gt;</content><author><name>ebambol</name></author><category term="Network" /><category term="Computer Science" /><summary type="html">실제로는 더 복잡한 과정이지만 많이 생략되어 있습니다.</summary></entry><entry><title type="html">Maven</title><link href="/java/maven/" rel="alternate" type="text/html" title="Maven" /><published>2021-06-30T00:00:00+09:00</published><updated>2021-07-07T00:00:00+09:00</updated><id>/java/maven</id><content type="html" xml:base="/java/maven/">&lt;div class=&quot;notice--primary&quot;&gt;
+&lt;p&gt;클라이언트(브라우저)가 서버에게 요청을 보내려면 우선 출입문을 여는데 여기서 출입문을  포트라고 한다. 포트는 0~65535까지 많이 존재하는데 그중 하나를 골라 a.com의 웹서버에 요청을 보내면 TCP에서는 포트번호, IP에서는 IP주소, Ethernet은 MAC주소를 받고 처리한다.&lt;/p&gt;</content><author><name>ebambol</name></author><category term="Network" /><category term="Computer Science" /><summary type="html">실제로는 더 복잡한 과정이지만 많이 생략되어 있습니다.</summary></entry><entry><title type="html">Maven</title><link href="/java/maven/" rel="alternate" type="text/html" title="Maven" /><published>2021-06-30T00:00:00+09:00</published><updated>2021-07-08T00:00:00+09:00</updated><id>/java/maven</id><content type="html" xml:base="/java/maven/">&lt;div class=&quot;notice--primary&quot;&gt;
 &lt;p&gt;💡 이 글은 &lt;a href=&quot;https://youtu.be/VAp0n9DmeEA&quot;&gt;뉴렉처 Maven강의&lt;/a&gt;를 듣고 복습을 목적으로 정리한 글입니다.&lt;/p&gt;
 
 &lt;/div&gt;
@@ -78,11 +78,11 @@ archetypeArtifactId=maven-archetype-quickstart	//자바 개발시 이용되는 �
 
 &lt;h5 id=&quot;-실행-순서-lifecycle&quot;&gt;🍁 실행 순서 (LifeCycle)&lt;/h5&gt;
 
-&lt;p&gt;Maven은 &lt;a href=&quot;https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Lifecycle_Reference&quot; target=&quot;_blank&quot;&gt;Default LifeCycle&lt;/a&gt; 을 따라 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;compile, test, package&lt;/code&gt;등 &lt;u&gt;원하는 위치까지 자동으로 실행&lt;/u&gt;해 준다. 이는 자바, 웹에 따라 단계가 다를 수 있지만, &lt;u&gt;일반적으로는 단계가 비슷&lt;/u&gt;하다. 그리고 패키징은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jar,war&lt;/code&gt;등으로 변경이 가능한데 이는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pom.xml(Project Object Model)&lt;/code&gt;에서 설정 가능하다.&lt;/p&gt;
+&lt;p&gt;Maven은 &lt;a href=&quot;https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Lifecycle_Reference&quot; target=&quot;_blank&quot;&gt;Default LifeCycle&lt;/a&gt; 을 따라 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;compile, test, package&lt;/code&gt;등 &lt;u&gt;원하는 위치까지 자동으로 실행&lt;/u&gt;해 준다. 이는 자바, 웹에 따라 단계가 다를 수 있지만, &lt;u&gt;일반적으로는 단계가 비슷&lt;/u&gt;하다. 그리고 패키징은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jar,war&lt;/code&gt;등으로 변경할 수 있는데 이는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pom.xml(Project Object Model)&lt;/code&gt;에서 설정할 수 있다.&lt;/p&gt;
 
-&lt;h6 id=&quot;-phase-plug-in-goal&quot;&gt;🍂 Phase, Plug-in, Goal&lt;/h6&gt;
+&lt;p&gt;🍂 Phase, Plug-in, Goal&lt;/p&gt;
 
-&lt;p&gt;각 단계별(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Phase&lt;/code&gt;) 프로그램들이 맵핑되어 있고 &lt;u&gt;각 단계별 실행되는 프로그램&lt;/u&gt;을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Plug-in&lt;/code&gt;이라 하고 maven이 제공하는 &lt;a href=&quot;https://maven.apache.org/plugins/index.html&quot;&gt;기본플러그인&lt;/a&gt;과 다른 곳에서 구하는 플러그인이 있다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Plug-in&lt;/code&gt; 내부의 프로그램을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Goal&lt;/code&gt;이라하고, &lt;u&gt;플러그인을 설정하고 교체하는 것을 담당하는 것&lt;/u&gt;이 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pom.xml&lt;/code&gt;이다. 아래는 compile시 필요한 플러그인을 출력하는 명령어이다.&lt;/p&gt;
+&lt;p&gt;각 단계별(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Phase&lt;/code&gt;)로 프로그램들이 맵핑되어 있고 &lt;u&gt;단계별 실행되는 프로그램&lt;/u&gt;을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Plug-in&lt;/code&gt;이라 하고 maven이 제공하는 &lt;a href=&quot;https://maven.apache.org/plugins/index.html&quot;&gt;기본플러그인&lt;/a&gt;과 다른 곳에서 구하는 플러그인이 있다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Plug-in&lt;/code&gt; 내부의 프로그램을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Goal&lt;/code&gt;이라하고, &lt;u&gt;플러그인을 설정하고 교체하는 것을 담당하는 것&lt;/u&gt;이 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pom.xml&lt;/code&gt;이다. 아래는 compile시 필요한 플러그인을 출력하는 명령어이다.&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mvn help:describe -Dcmd=compile
 결과&amp;gt;
@@ -112,7 +112,7 @@ It is a part of the lifecycle for the POM packaging 'jar'. This lifecycle includ
 * deploy: org.apache.maven.plugins:maven-deploy-plugin:2.7:deploy
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;위의 결과중 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;compile&lt;/code&gt;를 변경하기 위해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pom.xml&lt;/code&gt;을 이용하여 JDK버전을 변경할 수 있다.&lt;/p&gt;
+&lt;p&gt;위의 결과 중 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;compile&lt;/code&gt;를 변경하기 위해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pom.xml&lt;/code&gt;을 이용하여 JDK버전을 변경할 수 있다.&lt;/p&gt;
 
 &lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	...  
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/dependencies&amp;gt;&lt;/span&gt;
@@ -136,11 +136,11 @@ It is a part of the lifecycle for the POM packaging 'jar'. This lifecycle includ
 
 &lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/73654909/124161486-6d829e80-dad8-11eb-9e9f-07f9c93b4c35.jpg&quot; alt=&quot;Eclipse_maven_2&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;플러그인의 버전이 올라감에 따라 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;source,target&lt;/code&gt;을 변경하고 싶을때는 오버라이드하듯 적용할 필요 없이 위해서 작성한 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;maven.compiler.source, target&lt;/code&gt; 방식으로 작성해도 된다. 다만, &lt;u&gt;플러그인이 가진 자세한 속성을 사용하고자 할때&lt;/u&gt;는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;오버라이드 방식&lt;/code&gt;을 이용한다.&lt;/p&gt;
+&lt;p&gt;플러그인의 버전이 올라감에 따라 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;source,target&lt;/code&gt;을 변경하고 싶을때는 오버라이드하듯 적용할 필요 없이 위해서 작성한 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;maven.compiler.source, target&lt;/code&gt; 방식으로 작성해도 된다. 다만, &lt;u&gt;플러그인이 가진 자세한 속성을 사용하고자 할 때&lt;/u&gt;는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;오버라이드 방식&lt;/code&gt;을 이용한다.&lt;/p&gt;
 
 &lt;h4 id=&quot;-웹프로젝트로-변경법&quot;&gt;🌲 웹프로젝트로 변경법&lt;/h4&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pom.xml&lt;/code&gt;에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;packaging&lt;/code&gt;을 jar에서 war로 변경함으로 간단하게 웹개발하기 위한 프로젝트로 변경이 가능하다. 변경하여 저장하게 되면 바로 변경되지 않고, 프로젝트를 우클릭 하여 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Maven - Update Project...&lt;/code&gt; 을 이용하도록 하자.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pom.xml&lt;/code&gt;에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;packaging&lt;/code&gt;을 jar에서 war로 변경함으로 간단하게 웹 개발하기 위한 프로젝트로 변경할 수 있다. 변경하여 저장하게 되면 바로 변경되지 않고, 프로젝트를 우클릭하여 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[Maven] - [Update Project...]&lt;/code&gt; 을 이용하도록 하자.&lt;/p&gt;
 
 &lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!--변경전--&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;packaging&amp;gt;&lt;/span&gt;jar&lt;span class=&quot;nt&quot;&gt;&amp;lt;/packaging&amp;gt;&lt;/span&gt;
@@ -148,7 +148,7 @@ It is a part of the lifecycle for the POM packaging 'jar'. This lifecycle includ
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;packaging&amp;gt;&lt;/span&gt;war&lt;span class=&quot;nt&quot;&gt;&amp;lt;/packaging&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;정상적으로 수정되면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pom.xml&lt;/code&gt;에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;web.xml is missing and &amp;lt;failOnMissingWebXml&amp;gt; is set to true&lt;/code&gt; 라는 오류가 발생한다. 이는 web.xml이 없어서 나타나는 오류로 의도적으로 만들었으면 src밑에 &lt;u&gt;webapp(WebHome)관련 폴더에서 `WEB-INF`폴더를 추가&lt;/u&gt;하고 추가한 폴더에 톰캣 폴더에 존재하는 &lt;u&gt;`web.xml`을 추가&lt;/u&gt;하면 오류가 사라지고, 웹프로젝트로 변경이 완료된다.&lt;/p&gt;
+&lt;p&gt;정상적으로 수정되면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pom.xml&lt;/code&gt;에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;web.xml is missing and &amp;lt;failOnMissingWebXml&amp;gt; is set to true&lt;/code&gt; 라는 오류가 발생한다. 이는 web.xml이 없어서 나타나는 오류로 의도적으로 만들었으면 src밑에 &lt;u&gt;webapp(WebHome)관련 폴더에서 `WEB-INF`폴더를 추가&lt;/u&gt;하고 추가한 폴더에 톰캣 폴더에 존재하는 &lt;u&gt;`web.xml`을 추가&lt;/u&gt;하면 오류가 사라지고, 웹 프로젝트로 변경이 완료된다.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;web.xml은 톰캣폴더 아래 webapps\ROOT\WEB-INF에 존재한다.&lt;/p&gt;
@@ -161,19 +161,56 @@ It is a part of the lifecycle for the POM packaging 'jar'. This lifecycle includ
 &lt;ul&gt;
   &lt;li&gt;
     &lt;ol&gt;
-      &lt;li&gt;프로젝트에서 우클릭하여 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Bulid Path - Configure Buld Path...&lt;/code&gt;클릭&lt;/li&gt;
-      &lt;li&gt;&lt;u&gt;Library 탭에서 Add Library 클릭후 Server Runtime&lt;/u&gt;을 통하여 톰캣라이브러리를 설정한다.&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;프로젝트에서 우클릭하여 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[Bulid Path] - [Configure Buld Path...]&lt;/code&gt;클릭&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;u&gt;[Library] 탭에서 [Add Library] 클릭후 Server Runtime&lt;/u&gt;을 통하여 톰캣 라이브러리를 설정한다.&lt;/p&gt;
+
+        &lt;p&gt;이 방법은 다른 장소(회사, 집)에서 톰캣 서버의 경로가 일치하지 않아 계속 변경해야 한다.&lt;/p&gt;
+      &lt;/li&gt;
     &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;두 번째 방법은 GitHub처럼 &lt;a href=&quot;https://mvnrepository.com/&quot;&gt;Maven 저장소&lt;/a&gt;를 이용하여 원격에 존재하는 파일을 자동으로 로컬로 가져오는 방법이다.&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;https://mvnrepository.com/&quot;&gt;Maven 저장소&lt;/a&gt;에 들어가서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tomcat jsp&lt;/code&gt;를 검색하게 되면 톰캣 버전별로 jsp API가 나오는데 원하는 버전을 클릭 후 나타나는 &lt;u&gt;Maven 코드를 복사한다.&lt;/u&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;u&gt;`pom.xml`에 `dependency`밑에 붙여넣으면 원격에 있는 파일이 로컬로 복사된다.&lt;/u&gt; 복사되는 경로는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C:\Users\[사용자이름]\.m2\repository\org\apache\tomcat&lt;/code&gt;이다. 다른 확인 방법으로는 이클립스를 이용하여 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[Java Resources]-[Libraries]-[Maven Dependencies]&lt;/code&gt;를 통해 jsp-api 이외에 &lt;u&gt;el, servlet이 자동으로 설치 된 것을 확인할 수 있다.&lt;/u&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;이클립스를 이용할 경우 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pom.xml&lt;/code&gt;을 열고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[Dependencies 탭]-[Add..]&lt;/code&gt;를 누르고 검색을 통하여 포함할 수 있다. 다른 방법으로는 프로젝트에서 우클릭후 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[Maven]-[Add Dependency]&lt;/code&gt;를 이용하는 방법이 있다.&lt;/p&gt;
+
+    &lt;p&gt;❓ 만약 검색 후 목록이 많이 나오지 않을 때는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[Window]-[Show View]-[Other]&lt;/code&gt;에서  Maven Repositories를 추가하여 Global Repositories에서 Rebulid Index를 클릭하면 된다. 이 작업은 1~3시간 정도 걸린다.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;이 방법은 다른 장소(회사,집)에서 톰캣서버의 경로가 일치하지 않아 계속 변경해야한다.&lt;/p&gt;
+&lt;h6 id=&quot;-라이브러리-오류&quot;&gt;🍂 라이브러리 오류&lt;/h6&gt;
+
+&lt;p&gt;라이브러리 오류는 라이브러리가 설치되어 있는데, 파일이 깨졌을때  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;javax.servlet.http.HttpServlet&quot; was not found on the Java&lt;/code&gt; 이런 오류가 뜨는데 이럴 때는 이클립스 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[Java Resources]-[Libraries]-[Maven Dendencies]&lt;/code&gt;에 존재하는 &lt;u&gt;jar파일안에 패키지가 나타나지 않는 것으로 확인할 수 있다.&lt;/u&gt;&lt;/p&gt;
+
+&lt;p&gt;이때 해결방법은 이클립스가 실행중이면 종류하고 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C:\Users\[사용자 이름]\.m2\repository&lt;/code&gt;에 들어가서 &lt;u&gt;모든 폴더를 삭제하는 것&lt;/u&gt;이다. 다시 이클립스를 실행하면 자동으로 다운이 된다.&lt;/p&gt;
+
+&lt;h4 id=&quot;-만든-프로젝트를-다른-프로젝트에-적용-하는-방법&quot;&gt;🌲 만든 프로젝트를 다른 프로젝트에 적용 하는 방법&lt;/h4&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;두번째 방법은 GitHub처럼 &lt;a href=&quot;https://mvnrepository.com/&quot;&gt;Maven 저장소&lt;/a&gt;를 이용하여 원격에 존재하는 파일을 자동으로 로컬로 가져오는 방법이다.
+  &lt;li&gt;
+    &lt;p&gt;Export를 통하여 jar 파일을 만들고 로컬 레퍼지토리에 설치 (매우 번거로움)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
     &lt;ol&gt;
-      &lt;li&gt;&lt;a href=&quot;https://mvnrepository.com/&quot;&gt;Maven 저장소&lt;/a&gt;에 들어가서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tomcat jsp&lt;/code&gt;를 검색하게 되면 톰캣 버전별로 jsp API가 나오는데 원하는 버전을 클릭후 나타나는 &lt;u&gt;Maven 코드를 복사한다.&lt;/u&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;u&gt;`pom.xml`에 `dependency`밑에 붙여넣으면 원격에 있는 파일이 로컬로 복사된다.&lt;/u&gt; 복사되는 경로는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C:\Users\[사용자이름]\.m2\repository\org\apache\tomcat&lt;/code&gt;이다. 다른 확인 방법으로는 이클립스를 이용하여 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Java Resources-Libraries-Maven Dependencies&lt;/code&gt;를 통해 jsp-api 이외에 &lt;u&gt;el, servlet이 자동으로 설치 된것을 확인할 수 있다.&lt;/u&gt;&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;프로젝트를 우클릭하고 &lt;u&gt;[Run As]-[Maven install]를 통하여 설치할 수 있다.&lt;/u&gt;&lt;/p&gt;
+
+        &lt;p&gt;❓ 만약 빌드 도중에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;No compiler is provided in this environment. Perhaps you are running on a JRE rather than a JDK?&lt;/code&gt;이라는 에러가 발생하면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[Window]-[Preferences]&lt;/code&gt;를 클릭하여 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[Java]-[Installed JREs]&lt;/code&gt;에 &lt;u&gt;JRE가 아니라 JDK를 추가&lt;/u&gt;해 주도록 하자.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;설치 후 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Maven Repositories&lt;/code&gt;탭에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Local Repository&lt;/code&gt;를 우클릭한 후 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Rebulid Index&lt;/code&gt; 해준다. 작업이 끝나면 설치된 것을 확인 할 수 있다.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;사용을 원하는 프로젝트에서 &lt;a href=&quot;#-라이브러리-설정&quot;&gt;라이브러리 설정&lt;/a&gt;을 통해 포함할 수 있다. 이후 import를 이용하여 사용하도록 하자.&lt;/p&gt;
+      &lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
 &lt;/ul&gt;</content><author><name>ebambol</name></author><category term="Java" /><category term="Maven" /><summary type="html"></summary></entry><entry><title type="html">도시락드림</title><link href="/project/DosirakDream/" rel="alternate" type="text/html" title="도시락드림" /><published>2021-06-04T00:00:00+09:00</published><updated>2021-06-25T00:00:00+09:00</updated><id>/project/DosirakDream</id><content type="html" xml:base="/project/DosirakDream/">&lt;blockquote&gt;
