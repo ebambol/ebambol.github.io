@@ -1,0 +1,28 @@
+I"�
+<div class="list__item">
+    <article class="archive-item">
+        <div>
+            <span>
+              <a href="/til/Internet/">Network 흐름만 알아보기</a>
+            </span>
+            <small> 
+              <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2021.07.05
+              
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords"><a href="/categories/#til" class="page__taxonomy-item-category" rel="tag">TIL</a>
+                    
+                    
+                    <a href="/tags/#network" class="page__taxonomy-item-tag" rel="tag">Network</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#til" class="page__taxonomy-item-tag" rel="tag">TIL</a>
+                
+            </span>
+        </span>
+            </small>
+        </div>
+      </article>
+</div>
+:ET

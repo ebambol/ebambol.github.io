@@ -25,15 +25,24 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Document" %}
-                        <li><a href="/categories/document" class="">Java API도큐먼트 ({{category[1].size}})</a></li>
+                    {% if category[0] == "JSP" %}
+                        <li><a href="/categories/jsp" class="">JSP ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
+        <span class="nav__sub-title">TIL</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "JSP" %}
-                        <li><a href="/categories/jsp" class="">JSP ({{category[1].size}})</a></li>
+                    {% if category[0] == "TIL" %}
+                        <li><a href="/categories/til" class="">TIL (Today I Learned) ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        <span class="nav__sub-title">CS</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "DataStructure" %}
+                        <li><a href="/categories/DS" class="">자료구조 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>

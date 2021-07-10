@@ -1,0 +1,771 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.23.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+        <!--폰트 : "Nanum Gothic Coding", "Coming Soon"-->
+        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Coming+Soon&family=Nanum+Gothic+Coding&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Coming+Soon&family=Nanum+Gothic+Coding&display=swap">
+        
+        <!--폰트 : "Iropke Batang"-->
+        <link rel="preload" as="style" href="https://cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css">
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[Data Structure] Linked List - 공부 블로그 📗</title>
+<meta name="description" content="🌲 개념">
+
+
+  <meta name="author" content="ebambol">
+  
+  <meta property="article:author" content="ebambol">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="공부 블로그 📗">
+<meta property="og:title" content="[Data Structure] Linked List">
+<meta property="og:url" content="/datastructure/LinkedList/">
+
+
+  <meta property="og:description" content="🌲 개념">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-07-10T00:00:00+09:00">
+
+
+
+  <meta property="article:modified_time" content="2021-07-10T00:00:00+09:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/datastructure/LinkedList/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "ebambol",
+      "url": "/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="공부 블로그 📗 Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          공부 블로그 📗
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/categories/">Category</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/categories/#datastructure" itemprop="item"><span itemprop="name">Datastructure</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">[Data Structure] Linked List</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">ebambol</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>안녕하세요 :)</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="mailto:palec0865@gmail.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/ebambol" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+
+  
+    <!--전체 글 수를 세기 위한 연산. sum 변수에 전체 글 수 저장-->
+
+
+
+<nav class="nav__list">
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">토글 메뉴</label>
+  <ul class="nav__items" id="category_tag_menu">
+      <!--전체 글 수-->
+      <li>
+            📂 <span style="font-family:'Cafe24Oneprettynight';">전체 글 수</style> <span style="font-family:'Coming Soon';">4</style> <span style="font-family:'Cafe24Oneprettynight';">개</style> 
+      </li>
+      <li>
+        <!--span 태그로 카테고리들을 크게 분류 ex) C/C++/C#-->
+        <span class="nav__sub-title">Java/JSP</span>
+            <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
+            <ul>
+                <!--Cpp 카테고리 글들을 모아둔 페이지인 /categories/cpp 주소의 글로 링크 연결-->
+                <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
+                
+                    
+                
+                    
+                        <li><a href="/categories/java" class="">Java (1)</a></li>
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        <span class="nav__sub-title">TIL</span>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                        <li><a href="/categories/til" class="">TIL (Today I Learned) (1)</a></li>
+                    
+                
+                    
+                
+            </ul>
+        <span class="nav__sub-title">CS</span>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        <li><a href="/categories/DS" class="">자료구조 (1)</a></li>
+                    
+                
+            </ul>
+        <!--span 태그로 카테고리들을 크게 분류 ex) C/C++/C#-->
+        <span class="nav__sub-title">Project</span>
+            <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
+            <ul>
+                <!--Cpp 카테고리 글들을 모아둔 페이지인 /categories/cpp 주소의 글로 링크 연결-->
+                <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
+                
+                    
+                        <li><a href="/categories/project" class="">프로젝트 (1)</a></li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+      </li>
+  </ul>
+</nav>
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[Data Structure] Linked List">
+    <meta itemprop="description" content="🌲 개념">
+    <meta itemprop="datePublished" content="2021-07-10T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2021-07-10T00:00:00+09:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">[Data Structure] Linked List
+</h1>
+          
+
+<p class="page__meta"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Date:</strong> <time datetime="2021-07-10 00:00:00 +0900">2021.07.10</time>
+    &nbsp;&nbsp;&nbsp;
+    <strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-07-10">2021.07.10</time>
+</p>
+
+
+          
+
+
+          
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#datastructure" class="page__taxonomy-item-category" rel="tag">DataStructure</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#computer-science" class="page__taxonomy-item-tag" rel="tag">Computer Science</a><span class="sep">, </span>
+    
+      <a href="/tags/#data-structure" class="page__taxonomy-item-tag" rel="tag">Data Structure</a><span class="sep">, </span>
+    
+      <a href="/tags/#linked-list" class="page__taxonomy-item-tag" rel="tag">Linked List</a>
+    
+    </span>
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> 목차</h4></header>
+              <ul class="toc__menu"><li><a href="#-개념">🌲 개념</a><ul><li><a href="#-삽입">🍁 삽입</a></li><li><a href="#-삭제">🍁 삭제</a></li></ul></li><li><a href="#-배열array과-다른점">🌲 배열(Array)과 다른점</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h3 id="-개념">🌲 개념</h3>
+
+<p><img src="https://user-images.githubusercontent.com/73654909/125159518-de9a1400-e1b2-11eb-9f97-2c14f399554a.jpg" alt="LinkedList_1" width="40%" heght="40%" class="align-center" /></p>
+
+<p>컴퓨터의 자료를 저장하는 구조의 한 종류, 일렬로 연결된 데이터를 저장할때 사용하고 다음 데이터의 주소를 가지고 있다.</p>
+
+<h5 id="-삽입">🍁 삽입</h5>
+
+<p><img src="https://user-images.githubusercontent.com/73654909/125159515-dd68e700-e1b2-11eb-901e-95ed1173c9ab.jpg" alt="LinkedList_2" width="40%" heght="40%" class="align-center" /></p>
+
+<p>Linked List에 데이터를 중간에 삽입하고 싶으면 앞에 노드가 가지고 있던 Next Address를 추가한 노드의 Next Address로 바꾸고,  앞 노드는 추가한 노드로 Next Address를 변경한다.</p>
+
+<h5 id="-삭제">🍁 삭제</h5>
+
+<p><img src="https://user-images.githubusercontent.com/73654909/125159517-de9a1400-e1b2-11eb-86bc-3820944f7551.jpg" alt="LinkedList_3" width="40%" heght="40%" class="align-center" /></p>
+
+<p>데이터를 삭제하고싶을때는 삭제대상이 가졌던 다음주소의 노드를 앞에 노드에 주면 된다. 이렇게 되면 <code class="language-plaintext highlighter-rouge">Linked List</code>에서는 삭제되었지만, 메모리에는 아직 존재하는데 <code class="language-plaintext highlighter-rouge">Java</code>에서는 <code class="language-plaintext highlighter-rouge">GC;Garbage Collection</code>가 처리해주지만 <code class="language-plaintext highlighter-rouge">C,C++</code>는 반드시 사용안하겠다고 명시를 해야한다.</p>
+
+<h4 id="-배열array과-다른점">🌲 배열(Array)과 다른점</h4>
+
+<p><strong>배열</strong>은 방들이 물리적으로 한곳에 몰려있다. 예를들면 20층짜리 아파트 한동에 1호, 2호, 3호, …, 19호, 20호 처럼 모여있고 <u>크기를 한번 정하면 늘이거나 줄이는것이 많이 번거롭다.</u></p>
+
+<p>반면에 <strong>Linked List</strong>는 아파트 여러동을 거친다. 1동에 1호, 5동에 3호, 2동에 2호, … 와 같다. 그래서 <code class="language-plaintext highlighter-rouge">Linked List</code>는 <u>배열보다는 속도가 느리지만 추가, 삭제는 주소값만 바꿔주면되어 편리하다.</u>이러한 특성으로 <u>길이가 정해지지 않은 데이터를 핸들링할때는 `Linked List`를 사용하는게 좋다.</u></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        <!--
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#datastructure" class="page__taxonomy-item-category" rel="tag">DataStructure</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#computer-science" class="page__taxonomy-item-tag" rel="tag">Computer Science</a><span class="sep">, </span>
+    
+      <a href="/tags/#data-structure" class="page__taxonomy-item-tag" rel="tag">Data Structure</a><span class="sep">, </span>
+    
+      <a href="/tags/#linked-list" class="page__taxonomy-item-tag" rel="tag">Linked List</a>
+    
+    </span>
+  </p>
+
+
+        
+
+<p class="page__meta"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Date:</strong> <time datetime="2021-07-10 00:00:00 +0900">2021.07.10</time>
+    &nbsp;&nbsp;&nbsp;
+    <strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-07-10">2021.07.10</time>
+</p>
+
+
+      -->
+      <hr>
+     
+      
+
+
+  
+  	
+  	
+  	
+  	
+  	
+<h4 class="page__meta-title">
+  <span style="font-family:'Coming Soon'; color:#9CD99A;">DataStructure</span>
+  <span style="font-family:'Cafe24Oneprettynight';">카테고리 내 다른 글 보러가기</span>
+</h4>
+
+
+<!-- original
+
+  <nav class="pagination">
+    
+      <a href="/til/Internet/" class="pagination--pager" title="Network 흐름만 알아보기
+">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
+    
+  </nav>
+
+-->
+      </footer>
+      
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%5BData+Structure%5D+Linked+List%20%2Fdatastructure%2FLinkedList%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=%2Fdatastructure%2FLinkedList%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2Fdatastructure%2FLinkedList%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">최근 글 10개</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="list__item">
+    <article class="archive-item">
+        <div>
+            <span>
+              <a href="/til/Internet/">Network 흐름만 알아보기</a>
+            </span>
+            <small> 
+              <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2021.07.05
+              
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords"><a href="/categories/#til" class="page__taxonomy-item-category" rel="tag">TIL</a>
+                    
+                    
+                    <a href="/tags/#network" class="page__taxonomy-item-tag" rel="tag">Network</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#til" class="page__taxonomy-item-tag" rel="tag">TIL</a>
+                
+            </span>
+        </span>
+            </small>
+        </div>
+      </article>
+</div>
+        
+          
+
+
+
+<div class="list__item">
+    <article class="archive-item">
+        <div>
+            <span>
+              <a href="/java/maven/">Maven</a>
+            </span>
+            <small> 
+              <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2021.06.30
+              
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords"><a href="/categories/#java" class="page__taxonomy-item-category" rel="tag">Java</a>
+                    
+                    
+                    <a href="/tags/#maven" class="page__taxonomy-item-tag" rel="tag">Maven</a>
+                
+            </span>
+        </span>
+            </small>
+        </div>
+      </article>
+</div>
+        
+          
+
+
+
+<div class="list__item">
+    <article class="archive-item">
+        <div>
+            <span>
+              <a href="/project/DosirakDream/">[Project] 도시락드림</a>
+            </span>
+            <small> 
+              <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2021.06.04
+              
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords"><a href="/categories/#project" class="page__taxonomy-item-category" rel="tag">Project</a>
+                    
+                    
+                    <a href="/tags/#dosirakdream" class="page__taxonomy-item-tag" rel="tag">DosirakDream</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#project" class="page__taxonomy-item-tag" rel="tag">Project</a>
+                
+            </span>
+        </span>
+            </small>
+        </div>
+      </article>
+</div>
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/ebambol" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    <!-- 푸터 피드 제거
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+    --> 
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 ebambol. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,33 @@
+I"“
+<div class="list__item">
+    <article class="archive-item">
+        <div>
+            <span>
+              <a href="/datastructure/LinkedList/">[Data Structure] Linked List</a>
+            </span>
+            <small> 
+              <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2021.07.10
+              
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords"><a href="/categories/#datastructure" class="page__taxonomy-item-category" rel="tag">DataStructure</a>
+                    
+                    
+                    <a href="/tags/#computer-science" class="page__taxonomy-item-tag" rel="tag">Computer Science</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#data-structure" class="page__taxonomy-item-tag" rel="tag">Data Structure</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#linked-list" class="page__taxonomy-item-tag" rel="tag">Linked List</a>
+                
+            </span>
+        </span>
+            </small>
+        </div>
+      </article>
+</div>
+
+:ET

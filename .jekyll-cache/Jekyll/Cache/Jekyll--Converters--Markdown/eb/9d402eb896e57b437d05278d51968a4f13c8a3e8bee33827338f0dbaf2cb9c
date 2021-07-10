@@ -1,0 +1,194 @@
+I"=
+<div class="notice--primary">
+<p>💡 이 글은 <a href="https://youtu.be/VAp0n9DmeEA">뉴렉처 Maven강의</a>를 듣고 복습을 목적으로 정리한 글입니다.</p>
+
+</div>
+
+<h2 id="maven">🍀maven</h2>
+
+<p>자바 빌드를 도와주는 <u>빌드툴</u>이다. <code class="language-plaintext highlighter-rouge">Gradle</code>, <code class="language-plaintext highlighter-rouge">Ant</code> 등이 있다.</p>
+
+<h4 id="-빌드-과정">🌲 빌드 과정</h4>
+
+<p><img src="https://user-images.githubusercontent.com/73654909/124113965-fda7f000-daa6-11eb-805c-9b5f54e1cded.jpg" alt="maven Build tool" /></p>
+
+<p>프로젝트 생성과 라이브러리설정 작업을 하는 것을 빌드툴이라고 한다.</p>
+
+<h4 id="-설치-방법">🌲 설치 방법</h4>
+
+<ol>
+  <li><a href="https://maven.apache.org/" target="_blank">Apache Maven</a>에 접속하여 <code class="language-plaintext highlighter-rouge">Binary zip archive</code>을 다운받고 적당한 위치에 압축을 푼다.</li>
+  <li><u>환경변수를 설정</u>한다. <code class="language-plaintext highlighter-rouge">%M2_HOME%</code>에 설치경로를 작성하고, <code class="language-plaintext highlighter-rouge">path</code>에 <code class="language-plaintext highlighter-rouge">%M2_HOME%\bin</code> 작성하여 등록한다.</li>
+  <li>cmd 창을 열어 <code class="language-plaintext highlighter-rouge">mvn -version</code>을 입력하여 잘 설치되었는지 확인한다.</li>
+</ol>
+
+<h4 id="-사용법">🌲 사용법</h4>
+
+<h5 id="-자바-프로젝트-생성">🍁 자바 프로젝트 생성</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mvn archetype:generate -D	//archetype 생성
+groupId=그룹 이름 -D		//그룹 이름 설정 (패키지와 비슷)
+artifactId=프로젝트 이름 -D	//프로젝트 이름 설정
+archetypeArtifactId=maven-archetype-quickstart	//자바 개발시 이용되는 기본 템플릿
+</code></pre></div></div>
+
+<h5 id="-컴파일">🍁 컴파일</h5>
+
+<p class="notice--warning">❗ 주의사항 : <code class="language-plaintext highlighter-rouge">pom.xml</code>, <code class="language-plaintext highlighter-rouge">src</code>가 <u>존재하는 폴더에서 실행</u>해야 하고, cmd에 <code class="language-plaintext highlighter-rouge">mvn compile</code>을 입력하면 컴파일이 작동한다.</p>
+
+<p>더 이상 지원하지 않는 버전이라 업데이트 하라고 뜨면 아래 코드를 <code class="language-plaintext highlighter-rouge">pom.xml</code>에 작성한다. 설정하지 않았을시 메이븐의 퀵스타트 버전의 기본 JDK1.5버전이 사용된다.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;/dependencies&gt;</span>    
+	...
+	<span class="nt">&lt;properties&gt;</span>
+	   	<span class="nt">&lt;maven.compiler.source&gt;</span>1.8<span class="nt">&lt;/maven.compiler.source&gt;</span>
+		<span class="nt">&lt;maven.compiler.target&gt;</span>1.8<span class="nt">&lt;/maven.compiler.target&gt;</span>
+	<span class="nt">&lt;/properties&gt;</span>
+	...
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div></div>
+
+<p>mvn <u>패키지를 만들고 싶으면</u> <code class="language-plaintext highlighter-rouge">mvn package</code>를 cmd에 입력하면 <code class="language-plaintext highlighter-rouge">.jar</code>파일을 만들어준다. 이 jar파일의 확장자를 <code class="language-plaintext highlighter-rouge">.zip</code>으로 변경하여 내용을 확인 할 수 있는데 안에는 실행파일인 <code class="language-plaintext highlighter-rouge">.class</code>파일이 들어있다. 이를 아래 방법을 이용하면 정상적으로 실행된다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java -cp target\라이브러리.jar 클래스이름
+</code></pre></div></div>
+
+<h5 id="-실행-순서-lifecycle">🍁 실행 순서 (LifeCycle)</h5>
+
+<p>Maven은 <a href="https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Lifecycle_Reference" target="_blank">Default LifeCycle</a> 을 따라 <code class="language-plaintext highlighter-rouge">compile, test, package</code>등 <u>원하는 위치까지 자동으로 실행</u>해 준다. 이는 자바, 웹에 따라 단계가 다를 수 있지만, <u>일반적으로는 단계가 비슷</u>하다. 그리고 패키징은 <code class="language-plaintext highlighter-rouge">jar,war</code>등으로 변경할 수 있는데 이는 <code class="language-plaintext highlighter-rouge">pom.xml(Project Object Model)</code>에서 설정할 수 있다.</p>
+
+<p>🍂 Phase, Plug-in, Goal</p>
+
+<p>각 단계별(<code class="language-plaintext highlighter-rouge">Phase</code>)로 프로그램들이 맵핑되어 있고 <u>단계별 실행되는 프로그램</u>을 <code class="language-plaintext highlighter-rouge">Plug-in</code>이라 하고 maven이 제공하는 <a href="https://maven.apache.org/plugins/index.html">기본플러그인</a>과 다른 곳에서 구하는 플러그인이 있다. <code class="language-plaintext highlighter-rouge">Plug-in</code> 내부의 프로그램을 <code class="language-plaintext highlighter-rouge">Goal</code>이라하고, <u>플러그인을 설정하고 교체하는 것을 담당하는 것</u>이 <code class="language-plaintext highlighter-rouge">pom.xml</code>이다. 아래는 compile시 필요한 플러그인을 출력하는 명령어이다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mvn help:describe -Dcmd=compile
+결과&gt;
+It is a part of the lifecycle for the POM packaging 'jar'. This lifecycle includes the following phases:
+* validate: Not defined
+* initialize: Not defined
+* generate-sources: Not defined
+* process-sources: Not defined
+* generate-resources: Not defined
+* process-resources: org.apache.maven.plugins:maven-resources-plugin:2.6:resources
+* compile: org.apache.maven.plugins:maven-compiler-plugin:3.1:compile
+* process-classes: Not defined
+* generate-test-sources: Not defined
+* process-test-sources: Not defined
+* generate-test-resources: Not defined
+* process-test-resources: org.apache.maven.plugins:maven-resources-plugin:2.6:testResources
+* test-compile: org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile
+* process-test-classes: Not defined
+* test: org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test
+* prepare-package: Not defined
+* package: org.apache.maven.plugins:maven-jar-plugin:2.4:jar
+* pre-integration-test: Not defined
+* integration-test: Not defined
+* post-integration-test: Not defined
+* verify: Not defined
+* install: org.apache.maven.plugins:maven-install-plugin:2.4:install
+* deploy: org.apache.maven.plugins:maven-deploy-plugin:2.7:deploy
+</code></pre></div></div>
+
+<p>위의 결과 중 <code class="language-plaintext highlighter-rouge">compile</code>를 변경하기 위해 <code class="language-plaintext highlighter-rouge">pom.xml</code>을 이용하여 JDK버전을 변경할 수 있다.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	...  
+<span class="nt">&lt;/dependencies&gt;</span>
+  <span class="c">&lt;!-- 플러그인 재정의 (override)--&gt;</span>
+  <span class="nt">&lt;build&gt;</span>
+  	<span class="nt">&lt;plugins&gt;</span>
+  		<span class="nt">&lt;plugin&gt;</span>
+  			<span class="c">&lt;!-- 플러그인 이름 --&gt;</span>
+	  		<span class="nt">&lt;artifactId&gt;</span>maven-compiler-plugin<span class="nt">&lt;/artifactId&gt;</span>
+            		<span class="c">&lt;!-- 플러그인 버전 --&gt;</span>
+	  		<span class="nt">&lt;version&gt;</span>3.8.1<span class="nt">&lt;/version&gt;</span>
+	  		<span class="nt">&lt;configuration&gt;</span>
+	  			<span class="nt">&lt;source&gt;</span>1.8<span class="nt">&lt;/source&gt;</span>
+	  			<span class="nt">&lt;target&gt;</span>1.8<span class="nt">&lt;/target&gt;</span>
+	  		<span class="nt">&lt;/configuration&gt;</span>
+  		<span class="nt">&lt;/plugin&gt;</span>
+  	<span class="nt">&lt;/plugins&gt;</span>
+  <span class="nt">&lt;/build&gt;</span>
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div></div>
+
+<p><img src="https://user-images.githubusercontent.com/73654909/124161486-6d829e80-dad8-11eb-9e9f-07f9c93b4c35.jpg" alt="Eclipse_maven_2" /></p>
+
+<p>플러그인의 버전이 올라감에 따라 <code class="language-plaintext highlighter-rouge">source,target</code>을 변경하고 싶을때는 오버라이드하듯 적용할 필요 없이 위해서 작성한 <code class="language-plaintext highlighter-rouge">maven.compiler.source, target</code> 방식으로 작성해도 된다. 다만, <u>플러그인이 가진 자세한 속성을 사용하고자 할 때</u>는 <code class="language-plaintext highlighter-rouge">오버라이드 방식</code>을 이용한다.</p>
+
+<h4 id="-웹프로젝트로-변경법">🌲 웹프로젝트로 변경법</h4>
+
+<p><code class="language-plaintext highlighter-rouge">pom.xml</code>에서 <code class="language-plaintext highlighter-rouge">packaging</code>을 jar에서 war로 변경함으로 간단하게 웹 개발하기 위한 프로젝트로 변경할 수 있다. 변경하여 저장하게 되면 바로 변경되지 않고, 프로젝트를 우클릭하여 <code class="language-plaintext highlighter-rouge">[Maven] - [Update Project...]</code> 을 이용하도록 하자.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!--변경전--&gt;</span>
+<span class="nt">&lt;packaging&gt;</span>jar<span class="nt">&lt;/packaging&gt;</span>
+<span class="c">&lt;!--변경후--&gt;</span>
+<span class="nt">&lt;packaging&gt;</span>war<span class="nt">&lt;/packaging&gt;</span>
+</code></pre></div></div>
+
+<p>정상적으로 수정되면 <code class="language-plaintext highlighter-rouge">pom.xml</code>에서 <code class="language-plaintext highlighter-rouge">web.xml is missing and &lt;failOnMissingWebXml&gt; is set to true</code> 라는 오류가 발생한다. 이는 web.xml이 없어서 나타나는 오류로 의도적으로 만들었으면 src밑에 <u>webapp(WebHome)관련 폴더에서 `WEB-INF`폴더를 추가</u>하고 추가한 폴더에 톰캣 폴더에 존재하는 <u>`web.xml`을 추가</u>하면 오류가 사라지고, 웹 프로젝트로 변경이 완료된다.</p>
+
+<blockquote>
+  <p>web.xml은 톰캣폴더 아래 webapps\ROOT\WEB-INF에 존재한다.</p>
+</blockquote>
+
+<h5 id="-라이브러리-설정">🍁 라이브러리 설정</h5>
+
+<p>jsp 파일을 생성하게 되면 <code class="language-plaintext highlighter-rouge">The superclass "javax.servlet.http.HttpServlet" was not found on the Java</code> 오류가 발생한다. 이는 라이브러리 설정을 해달라는 오류이다.</p>
+
+<ul>
+  <li>
+    <ol>
+      <li>
+        <p>프로젝트에서 우클릭하여 <code class="language-plaintext highlighter-rouge">[Bulid Path] - [Configure Buld Path...]</code>클릭</p>
+      </li>
+      <li>
+        <p><u>[Library] 탭에서 [Add Library] 클릭후 Server Runtime</u>을 통하여 톰캣 라이브러리를 설정한다.</p>
+
+        <p>이 방법은 다른 장소(회사, 집)에서 톰캣 서버의 경로가 일치하지 않아 계속 변경해야 한다.</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>두 번째 방법은 GitHub처럼 <a href="https://mvnrepository.com/">Maven 저장소</a>를 이용하여 원격에 존재하는 파일을 자동으로 로컬로 가져오는 방법이다.</p>
+
+    <ol>
+      <li><a href="https://mvnrepository.com/">Maven 저장소</a>에 들어가서 <code class="language-plaintext highlighter-rouge">tomcat jsp</code>를 검색하게 되면 톰캣 버전별로 jsp API가 나오는데 원하는 버전을 클릭 후 나타나는 <u>Maven 코드를 복사한다.</u></li>
+      <li><u>`pom.xml`에 `dependency`밑에 붙여넣으면 원격에 있는 파일이 로컬로 복사된다.</u> 복사되는 경로는 <code class="language-plaintext highlighter-rouge">C:\Users\[사용자이름]\.m2\repository\org\apache\tomcat</code>이다. 다른 확인 방법으로는 이클립스를 이용하여 <code class="language-plaintext highlighter-rouge">[Java Resources]-[Libraries]-[Maven Dependencies]</code>를 통해 jsp-api 이외에 <u>el, servlet이 자동으로 설치 된 것을 확인할 수 있다.</u></li>
+    </ol>
+  </li>
+  <li>
+    <p>이클립스를 이용할 경우 <code class="language-plaintext highlighter-rouge">pom.xml</code>을 열고 <code class="language-plaintext highlighter-rouge">[Dependencies 탭]-[Add..]</code>를 누르고 검색을 통하여 포함할 수 있다. 다른 방법으로는 프로젝트에서 우클릭후 <code class="language-plaintext highlighter-rouge">[Maven]-[Add Dependency]</code>를 이용하는 방법이 있다.</p>
+
+    <p>❓ 만약 검색 후 목록이 많이 나오지 않을 때는 <code class="language-plaintext highlighter-rouge">[Window]-[Show View]-[Other]</code>에서  Maven Repositories를 추가하여 Global Repositories에서 Rebulid Index를 클릭하면 된다. 이 작업은 1~3시간 정도 걸린다.</p>
+  </li>
+</ul>
+
+<h6 id="-라이브러리-오류">🍂 라이브러리 오류</h6>
+
+<p>라이브러리 오류는 라이브러리가 설치되어 있는데, 파일이 깨졌을때  <code class="language-plaintext highlighter-rouge">"javax.servlet.http.HttpServlet" was not found on the Java</code> 이런 오류가 뜨는데 이럴 때는 이클립스 <code class="language-plaintext highlighter-rouge">[Java Resources]-[Libraries]-[Maven Dendencies]</code>에 존재하는 <u>jar파일안에 패키지가 나타나지 않는 것으로 확인할 수 있다.</u></p>
+
+<p>이때 해결방법은 이클립스가 실행중이면 종류하고 <code class="language-plaintext highlighter-rouge">C:\Users\[사용자 이름]\.m2\repository</code>에 들어가서 <u>모든 폴더를 삭제하는 것</u>이다. 다시 이클립스를 실행하면 자동으로 다운이 된다.</p>
+
+<h4 id="-만든-프로젝트를-다른-프로젝트에-적용-하는-방법">🌲 만든 프로젝트를 다른 프로젝트에 적용 하는 방법</h4>
+
+<ul>
+  <li>
+    <p>Export를 통하여 jar 파일을 만들고 로컬 레퍼지토리에 설치 (매우 번거로움)</p>
+  </li>
+  <li>
+    <ol>
+      <li>
+        <p>프로젝트를 우클릭하고 <u>[Run As]-[Maven install]를 통하여 설치할 수 있다.</u></p>
+
+        <p>❓ 만약 빌드 도중에 <code class="language-plaintext highlighter-rouge">No compiler is provided in this environment. Perhaps you are running on a JRE rather than a JDK?</code>이라는 에러가 발생하면 <code class="language-plaintext highlighter-rouge">[Window]-[Preferences]</code>를 클릭하여 <code class="language-plaintext highlighter-rouge">[Java]-[Installed JREs]</code>에 <u>JRE가 아니라 JDK를 추가</u>해 주도록 하자.</p>
+      </li>
+      <li>
+        <p>설치 후 <code class="language-plaintext highlighter-rouge">Maven Repositories</code>탭에서 <code class="language-plaintext highlighter-rouge">Local Repository</code>를 우클릭한 후 <code class="language-plaintext highlighter-rouge">Rebulid Index</code> 해준다. 작업이 끝나면 설치된 것을 확인 할 수 있다.</p>
+      </li>
+      <li>
+        <p>사용을 원하는 프로젝트에서 <a href="#-라이브러리-설정">라이브러리 설정</a>을 통해 포함할 수 있다. 이후 import를 이용하여 사용하도록 하자.</p>
+      </li>
+    </ol>
+  </li>
+</ul>
+:ET

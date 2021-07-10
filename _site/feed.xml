@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-07-08T21:58:49+09:00</updated><id>/feed.xml</id><title type="html">공부 블로그 📗</title><subtitle>안녕하세요 :)</subtitle><author><name>ebambol</name></author><entry><title type="html">Network 흐름만 알아보기</title><link href="/network/Internet/" rel="alternate" type="text/html" title="Network 흐름만 알아보기" /><published>2021-07-05T00:00:00+09:00</published><updated>2021-07-05T00:00:00+09:00</updated><id>/network/Internet</id><content type="html" xml:base="/network/Internet/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-07-10T20:31:27+09:00</updated><id>/feed.xml</id><title type="html">공부 블로그 📗</title><subtitle>안녕하세요 :)</subtitle><author><name>ebambol</name></author><entry><title type="html">[Data Structure] Linked List</title><link href="/datastructure/LinkedList/" rel="alternate" type="text/html" title="[Data Structure] Linked List" /><published>2021-07-10T00:00:00+09:00</published><updated>2021-07-10T00:00:00+09:00</updated><id>/datastructure/LinkedList</id><content type="html" xml:base="/datastructure/LinkedList/">&lt;h3 id=&quot;-개념&quot;&gt;🌲 개념&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/73654909/125159518-de9a1400-e1b2-11eb-9f97-2c14f399554a.jpg&quot; alt=&quot;LinkedList_1&quot; width=&quot;40%&quot; heght=&quot;40%&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;컴퓨터의 자료를 저장하는 구조의 한 종류, 일렬로 연결된 데이터를 저장할때 사용하고 다음 데이터의 주소를 가지고 있다.&lt;/p&gt;
+
+&lt;h5 id=&quot;-삽입&quot;&gt;🍁 삽입&lt;/h5&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/73654909/125159515-dd68e700-e1b2-11eb-901e-95ed1173c9ab.jpg&quot; alt=&quot;LinkedList_2&quot; width=&quot;40%&quot; heght=&quot;40%&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Linked List에 데이터를 중간에 삽입하고 싶으면 앞에 노드가 가지고 있던 Next Address를 추가한 노드의 Next Address로 바꾸고,  앞 노드는 추가한 노드로 Next Address를 변경한다.&lt;/p&gt;
+
+&lt;h5 id=&quot;-삭제&quot;&gt;🍁 삭제&lt;/h5&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/73654909/125159517-de9a1400-e1b2-11eb-86bc-3820944f7551.jpg&quot; alt=&quot;LinkedList_3&quot; width=&quot;40%&quot; heght=&quot;40%&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;데이터를 삭제하고싶을때는 삭제대상이 가졌던 다음주소의 노드를 앞에 노드에 주면 된다. 이렇게 되면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Linked List&lt;/code&gt;에서는 삭제되었지만, 메모리에는 아직 존재하는데 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Java&lt;/code&gt;에서는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GC;Garbage Collection&lt;/code&gt;가 처리해주지만 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C,C++&lt;/code&gt;는 반드시 사용안하겠다고 명시를 해야한다.&lt;/p&gt;
+
+&lt;h4 id=&quot;-배열array과-다른점&quot;&gt;🌲 배열(Array)과 다른점&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;배열&lt;/strong&gt;은 방들이 물리적으로 한곳에 몰려있다. 예를들면 20층짜리 아파트 한동에 1호, 2호, 3호, …, 19호, 20호 처럼 모여있고 &lt;u&gt;크기를 한번 정하면 늘이거나 줄이는것이 많이 번거롭다.&lt;/u&gt;&lt;/p&gt;
+
+&lt;p&gt;반면에 &lt;strong&gt;Linked List&lt;/strong&gt;는 아파트 여러동을 거친다. 1동에 1호, 5동에 3호, 2동에 2호, … 와 같다. 그래서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Linked List&lt;/code&gt;는 &lt;u&gt;배열보다는 속도가 느리지만 추가, 삭제는 주소값만 바꿔주면되어 편리하다.&lt;/u&gt;이러한 특성으로 &lt;u&gt;길이가 정해지지 않은 데이터를 핸들링할때는 `Linked List`를 사용하는게 좋다.&lt;/u&gt;&lt;/p&gt;</content><author><name>ebambol</name></author><category term="DataStructure" /><category term="Computer Science" /><category term="Data Structure" /><category term="Linked List" /><summary type="html">🌲 개념</summary></entry><entry><title type="html">Network 흐름만 알아보기</title><link href="/til/Internet/" rel="alternate" type="text/html" title="Network 흐름만 알아보기" /><published>2021-07-05T00:00:00+09:00</published><updated>2021-07-05T00:00:00+09:00</updated><id>/til/Internet</id><content type="html" xml:base="/til/Internet/">&lt;blockquote&gt;
   &lt;p&gt;실제로는 더 복잡한 과정이지만 &lt;strong&gt;많이 생략&lt;/strong&gt;되어 있습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -22,7 +44,7 @@
 
 &lt;p&gt;참조 : &lt;a href=&quot;https://youtu.be/6jo2OYPK7k0&quot; target=&quot;_blank&quot;&gt;네트워크 계층으로 알아보는 인터넷의 원리 - 코드없는 프로그래밍(Youtube)&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;클라이언트(브라우저)가 서버에게 요청을 보내려면 우선 출입문을 여는데 여기서 출입문을  포트라고 한다. 포트는 0~65535까지 많이 존재하는데 그중 하나를 골라 a.com의 웹서버에 요청을 보내면 TCP에서는 포트번호, IP에서는 IP주소, Ethernet은 MAC주소를 받고 처리한다.&lt;/p&gt;</content><author><name>ebambol</name></author><category term="Network" /><category term="Computer Science" /><summary type="html">실제로는 더 복잡한 과정이지만 많이 생략되어 있습니다.</summary></entry><entry><title type="html">Maven</title><link href="/java/maven/" rel="alternate" type="text/html" title="Maven" /><published>2021-06-30T00:00:00+09:00</published><updated>2021-07-08T00:00:00+09:00</updated><id>/java/maven</id><content type="html" xml:base="/java/maven/">&lt;div class=&quot;notice--primary&quot;&gt;
+&lt;p&gt;클라이언트(브라우저)가 서버에게 요청을 보내려면 우선 출입문을 여는데 여기서 출입문을  포트라고 한다. 포트는 0~65535까지 많이 존재하는데 그중 하나를 골라 a.com의 웹서버에 요청을 보내면 TCP에서는 포트번호, IP에서는 IP주소, Ethernet은 MAC주소를 받고 처리한다.&lt;/p&gt;</content><author><name>ebambol</name></author><category term="TIL" /><category term="TIL" /><category term="Network" /><summary type="html">실제로는 더 복잡한 과정이지만 많이 생략되어 있습니다.</summary></entry><entry><title type="html">Maven</title><link href="/java/maven/" rel="alternate" type="text/html" title="Maven" /><published>2021-06-30T00:00:00+09:00</published><updated>2021-07-08T00:00:00+09:00</updated><id>/java/maven</id><content type="html" xml:base="/java/maven/">&lt;div class=&quot;notice--primary&quot;&gt;
 &lt;p&gt;💡 이 글은 &lt;a href=&quot;https://youtu.be/VAp0n9DmeEA&quot;&gt;뉴렉처 Maven강의&lt;/a&gt;를 듣고 복습을 목적으로 정리한 글입니다.&lt;/p&gt;
 
 &lt;/div&gt;
@@ -213,7 +235,7 @@ It is a part of the lifecycle for the POM packaging 'jar'. This lifecycle includ
       &lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>ebambol</name></author><category term="Java" /><category term="Maven" /><summary type="html"></summary></entry><entry><title type="html">도시락드림</title><link href="/project/DosirakDream/" rel="alternate" type="text/html" title="도시락드림" /><published>2021-06-04T00:00:00+09:00</published><updated>2021-06-25T00:00:00+09:00</updated><id>/project/DosirakDream</id><content type="html" xml:base="/project/DosirakDream/">&lt;blockquote&gt;
+&lt;/ul&gt;</content><author><name>ebambol</name></author><category term="Java" /><category term="Maven" /><summary type="html"></summary></entry><entry><title type="html">[Project] 도시락드림</title><link href="/project/DosirakDream/" rel="alternate" type="text/html" title="[Project] 도시락드림" /><published>2021-06-04T00:00:00+09:00</published><updated>2021-06-25T00:00:00+09:00</updated><id>/project/DosirakDream</id><content type="html" xml:base="/project/DosirakDream/">&lt;blockquote&gt;
   &lt;p&gt;도시락드림ppt 를 정리한 페이지입니다.
 ppt는 &lt;a href=&quot;https://github.com/ebambol/DosirakDream&quot;&gt;Github&lt;/a&gt;에서 받으실 수 있습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
